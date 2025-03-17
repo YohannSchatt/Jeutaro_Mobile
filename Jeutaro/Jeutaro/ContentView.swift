@@ -8,14 +8,45 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isMenuOpen = false
+    
+    private var selection = routeur()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            NavigationView(selection : self.selection)
+            if isMenuOpen {
+                Color.black.opacity(0.5).blur(radius: 20)
+                    .edgesIgnoringSafeArea(.all)
+                HStack {
+                    Spacer()
+                    NavigationSelectionView(selection : self.selection)
+                        .transition(.move(edge: .leading))
+                        .frame(width: UIScreen.main.bounds.width * 0.6)
+                }
+            }
+            VStack {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        withAnimation {
+                            self.isMenuOpen.toggle()
+                        }
+                    }) {
+                        Image(systemName: "line.horizontal.3")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .padding()
+                            .foregroundColor(Color.black)
+                    }
+                    .background(DefineColor.color1.color)
+                    .cornerRadius(15)
+                    .shadow(radius: 10)
+                    .padding(10)
+                }
+                Spacer()
+            }
         }
-        .padding()
     }
 }
 

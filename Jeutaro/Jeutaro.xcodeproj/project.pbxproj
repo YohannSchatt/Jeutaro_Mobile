@@ -14,6 +14,22 @@
 		B71FF1392D818FEF000425C3 /* JeutaroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1382D818FEF000425C3 /* JeutaroTests.swift */; };
 		B71FF1432D818FEF000425C3 /* JeutaroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1422D818FEF000425C3 /* JeutaroUITests.swift */; };
 		B71FF1452D818FEF000425C3 /* JeutaroUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1442D818FEF000425C3 /* JeutaroUITestsLaunchTests.swift */; };
+		B71FF1552D81A37D000425C3 /* NavigationSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1542D81A37D000425C3 /* NavigationSelectionView.swift */; };
+		B71FF1572D81A57F000425C3 /* ConnexionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1562D81A57F000425C3 /* ConnexionView.swift */; };
+		B71FF1592D81A5A7000425C3 /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1582D81A5A7000425C3 /* CatalogueView.swift */; };
+		B71FF15A2D81A5A7000425C3 /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1582D81A5A7000425C3 /* CatalogueView.swift */; };
+		B71FF15B2D81A5A7000425C3 /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1582D81A5A7000425C3 /* CatalogueView.swift */; };
+		B71FF15D2D81A5BC000425C3 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF15C2D81A5BC000425C3 /* SessionView.swift */; };
+		B71FF15E2D81A5BC000425C3 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF15C2D81A5BC000425C3 /* SessionView.swift */; };
+		B71FF15F2D81A5BC000425C3 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF15C2D81A5BC000425C3 /* SessionView.swift */; };
+		B71FF1612D81A90A000425C3 /* routeur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1602D81A909000425C3 /* routeur.swift */; };
+		B71FF1622D81A90A000425C3 /* routeur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1602D81A909000425C3 /* routeur.swift */; };
+		B71FF1632D81A90A000425C3 /* routeur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1602D81A909000425C3 /* routeur.swift */; };
+		B71FF1652D82DC30000425C3 /* NavigationSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1542D81A37D000425C3 /* NavigationSelectionView.swift */; };
+		B71FF1662D82DC30000425C3 /* NavigationSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1542D81A37D000425C3 /* NavigationSelectionView.swift */; };
+		B71FF16A2D82E2CB000425C3 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1692D82E2CB000425C3 /* NavigationView.swift */; };
+		B71FF16D2D82E822000425C3 /* DefineColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF16C2D82E822000425C3 /* DefineColor.swift */; };
+		B71FF16F2D8431FA000425C3 /* ButtonNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF16E2D8431FA000425C3 /* ButtonNavigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +60,14 @@
 		B71FF13E2D818FEF000425C3 /* JeutaroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JeutaroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71FF1422D818FEF000425C3 /* JeutaroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeutaroUITests.swift; sourceTree = "<group>"; };
 		B71FF1442D818FEF000425C3 /* JeutaroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeutaroUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B71FF1542D81A37D000425C3 /* NavigationSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSelectionView.swift; sourceTree = "<group>"; };
+		B71FF1562D81A57F000425C3 /* ConnexionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnexionView.swift; sourceTree = "<group>"; };
+		B71FF1582D81A5A7000425C3 /* CatalogueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueView.swift; sourceTree = "<group>"; };
+		B71FF15C2D81A5BC000425C3 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		B71FF1602D81A909000425C3 /* routeur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = routeur.swift; sourceTree = "<group>"; };
+		B71FF1692D82E2CB000425C3 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		B71FF16C2D82E822000425C3 /* DefineColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineColor.swift; sourceTree = "<group>"; };
+		B71FF16E2D8431FA000425C3 /* ButtonNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNavigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +118,11 @@
 		B71FF1262D818FED000425C3 /* Jeutaro */ = {
 			isa = PBXGroup;
 			children = (
+				B71FF1702D882C43000425C3 /* Service */,
+				B71FF16B2D82E80D000425C3 /* style */,
+				B71FF1532D81A32D000425C3 /* Model */,
+				B71FF1522D81A31F000425C3 /* ViewModel */,
+				B71FF1512D81A311000425C3 /* View */,
 				B71FF1272D818FED000425C3 /* JeutaroApp.swift */,
 				B71FF1292D818FED000425C3 /* ContentView.swift */,
 				B71FF12B2D818FEF000425C3 /* Assets.xcassets */,
@@ -125,6 +154,57 @@
 				B71FF1442D818FEF000425C3 /* JeutaroUITestsLaunchTests.swift */,
 			);
 			path = JeutaroUITests;
+			sourceTree = "<group>";
+		};
+		B71FF1512D81A311000425C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B71FF1642D82DBFD000425C3 /* Navigation */,
+				B71FF1562D81A57F000425C3 /* ConnexionView.swift */,
+				B71FF1582D81A5A7000425C3 /* CatalogueView.swift */,
+				B71FF15C2D81A5BC000425C3 /* SessionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B71FF1522D81A31F000425C3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B71FF1532D81A32D000425C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B71FF1642D82DBFD000425C3 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				B71FF1542D81A37D000425C3 /* NavigationSelectionView.swift */,
+				B71FF1602D81A909000425C3 /* routeur.swift */,
+				B71FF1692D82E2CB000425C3 /* NavigationView.swift */,
+				B71FF16E2D8431FA000425C3 /* ButtonNavigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		B71FF16B2D82E80D000425C3 /* style */ = {
+			isa = PBXGroup;
+			children = (
+				B71FF16C2D82E822000425C3 /* DefineColor.swift */,
+			);
+			path = style;
+			sourceTree = "<group>";
+		};
+		B71FF1702D882C43000425C3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +338,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B71FF12A2D818FED000425C3 /* ContentView.swift in Sources */,
+				B71FF1612D81A90A000425C3 /* routeur.swift in Sources */,
+				B71FF16A2D82E2CB000425C3 /* NavigationView.swift in Sources */,
+				B71FF16F2D8431FA000425C3 /* ButtonNavigation.swift in Sources */,
+				B71FF15D2D81A5BC000425C3 /* SessionView.swift in Sources */,
+				B71FF1552D81A37D000425C3 /* NavigationSelectionView.swift in Sources */,
+				B71FF1592D81A5A7000425C3 /* CatalogueView.swift in Sources */,
 				B71FF1282D818FED000425C3 /* JeutaroApp.swift in Sources */,
+				B71FF1572D81A57F000425C3 /* ConnexionView.swift in Sources */,
+				B71FF16D2D82E822000425C3 /* DefineColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +354,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71FF15A2D81A5A7000425C3 /* CatalogueView.swift in Sources */,
+				B71FF1622D81A90A000425C3 /* routeur.swift in Sources */,
+				B71FF1662D82DC30000425C3 /* NavigationSelectionView.swift in Sources */,
+				B71FF15E2D81A5BC000425C3 /* SessionView.swift in Sources */,
 				B71FF1392D818FEF000425C3 /* JeutaroTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +368,10 @@
 			files = (
 				B71FF1432D818FEF000425C3 /* JeutaroUITests.swift in Sources */,
 				B71FF1452D818FEF000425C3 /* JeutaroUITestsLaunchTests.swift in Sources */,
+				B71FF1632D81A90A000425C3 /* routeur.swift in Sources */,
+				B71FF15B2D81A5A7000425C3 /* CatalogueView.swift in Sources */,
+				B71FF1652D82DC30000425C3 /* NavigationSelectionView.swift in Sources */,
+				B71FF15F2D81A5BC000425C3 /* SessionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
