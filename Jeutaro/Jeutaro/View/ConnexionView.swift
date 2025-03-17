@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ConnexionView: View {
     var body: some View {
-        Text("Connexion")
+        TextField
     }
 }
 

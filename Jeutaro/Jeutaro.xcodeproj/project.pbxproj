@@ -30,6 +30,12 @@
 		B71FF16A2D82E2CB000425C3 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1692D82E2CB000425C3 /* NavigationView.swift */; };
 		B71FF16D2D82E822000425C3 /* DefineColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF16C2D82E822000425C3 /* DefineColor.swift */; };
 		B71FF16F2D8431FA000425C3 /* ButtonNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF16E2D8431FA000425C3 /* ButtonNavigation.swift */; };
+		B71FF1722D882D85000425C3 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1712D882D85000425C3 /* AuthService.swift */; };
+		B71FF1752D8839CE000425C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1742D8839CE000425C3 /* User.swift */; };
+		B71FF1762D8839CE000425C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1742D8839CE000425C3 /* User.swift */; };
+		B71FF17A2D886934000425C3 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1792D886934000425C3 /* SignIn.swift */; };
+		B71FF17C2D8875E7000425C3 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF17B2D8875E7000425C3 /* AuthError.swift */; };
+		B71FF17E2D8878B4000425C3 /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF17D2D8878B4000425C3 /* UserLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +74,12 @@
 		B71FF1692D82E2CB000425C3 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		B71FF16C2D82E822000425C3 /* DefineColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineColor.swift; sourceTree = "<group>"; };
 		B71FF16E2D8431FA000425C3 /* ButtonNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNavigation.swift; sourceTree = "<group>"; };
+		B71FF1712D882D85000425C3 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		B71FF1742D8839CE000425C3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B71FF1772D8840A5000425C3 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		B71FF1792D886934000425C3 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		B71FF17B2D8875E7000425C3 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		B71FF17D2D8878B4000425C3 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +110,7 @@
 		B71FF11B2D818FED000425C3 = {
 			isa = PBXGroup;
 			children = (
+				B71FF1772D8840A5000425C3 /* Config.xcconfig */,
 				B71FF1262D818FED000425C3 /* Jeutaro */,
 				B71FF1372D818FEF000425C3 /* JeutaroTests */,
 				B71FF1412D818FEF000425C3 /* JeutaroUITests */,
@@ -177,6 +190,7 @@
 		B71FF1532D81A32D000425C3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B71FF1742D8839CE000425C3 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,8 +217,28 @@
 		B71FF1702D882C43000425C3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				B71FF17F2D887903000425C3 /* Authentification */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		B71FF1782D88691E000425C3 /* dto */ = {
+			isa = PBXGroup;
+			children = (
+				B71FF1792D886934000425C3 /* SignIn.swift */,
+				B71FF17D2D8878B4000425C3 /* UserLogin.swift */,
+			);
+			path = dto;
+			sourceTree = "<group>";
+		};
+		B71FF17F2D887903000425C3 /* Authentification */ = {
+			isa = PBXGroup;
+			children = (
+				B71FF1782D88691E000425C3 /* dto */,
+				B71FF1712D882D85000425C3 /* AuthService.swift */,
+				B71FF17B2D8875E7000425C3 /* AuthError.swift */,
+			);
+			path = Authentification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,12 +372,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B71FF12A2D818FED000425C3 /* ContentView.swift in Sources */,
+				B71FF17A2D886934000425C3 /* SignIn.swift in Sources */,
 				B71FF1612D81A90A000425C3 /* routeur.swift in Sources */,
 				B71FF16A2D82E2CB000425C3 /* NavigationView.swift in Sources */,
 				B71FF16F2D8431FA000425C3 /* ButtonNavigation.swift in Sources */,
 				B71FF15D2D81A5BC000425C3 /* SessionView.swift in Sources */,
+				B71FF17C2D8875E7000425C3 /* AuthError.swift in Sources */,
+				B71FF1722D882D85000425C3 /* AuthService.swift in Sources */,
 				B71FF1552D81A37D000425C3 /* NavigationSelectionView.swift in Sources */,
 				B71FF1592D81A5A7000425C3 /* CatalogueView.swift in Sources */,
+				B71FF1752D8839CE000425C3 /* User.swift in Sources */,
+				B71FF17E2D8878B4000425C3 /* UserLogin.swift in Sources */,
 				B71FF1282D818FED000425C3 /* JeutaroApp.swift in Sources */,
 				B71FF1572D81A57F000425C3 /* ConnexionView.swift in Sources */,
 				B71FF16D2D82E822000425C3 /* DefineColor.swift in Sources */,
@@ -359,6 +398,7 @@
 				B71FF1662D82DC30000425C3 /* NavigationSelectionView.swift in Sources */,
 				B71FF15E2D81A5BC000425C3 /* SessionView.swift in Sources */,
 				B71FF1392D818FEF000425C3 /* JeutaroTests.swift in Sources */,
+				B71FF1762D8839CE000425C3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +433,7 @@
 /* Begin XCBuildConfiguration section */
 		B71FF1462D818FEF000425C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B71FF1772D8840A5000425C3 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -453,6 +494,7 @@
 		};
 		B71FF1472D818FEF000425C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B71FF1772D8840A5000425C3 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
