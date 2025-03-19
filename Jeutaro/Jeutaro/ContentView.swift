@@ -9,18 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isMenuOpen = false
-    
-    private var selection = routeur()
 
     var body: some View {
         ZStack {
-            NavigationView(selection : self.selection)
+            NavigationView()
             if isMenuOpen {
                 Color.black.opacity(0.5).blur(radius: 20)
                     .edgesIgnoringSafeArea(.all)
                 HStack {
                     Spacer()
-                    NavigationSelectionView(selection : self.selection)
+                    NavigationSelectionView()
                         .transition(.move(edge: .leading))
                         .frame(width: UIScreen.main.bounds.width * 0.6)
                 }
@@ -53,5 +51,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(Routeur())
     }
 }

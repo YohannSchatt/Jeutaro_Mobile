@@ -9,7 +9,9 @@ import SwiftUI
 
 struct NavigationSelectionView: View {
 
-    @ObservedObject var selection: routeur
+    @EnvironmentObject var routeur : Routeur
+
+    var user : User? = nil
 
     var body: some View {
         NavigationStack {
@@ -22,9 +24,11 @@ struct NavigationSelectionView: View {
                         Spacer()
                     }
                     Spacer().frame(maxHeight: 40)
-                    ButtonNavigation(selection: selection, text: "Connexion", view: ConnexionView())
-                    ButtonNavigation(selection: selection, text: "Catalogue", view: CatalogueView())
-                    ButtonNavigation(selection: selection, text: "Session", view: SessionView())
+                    if(user == nil) {
+                        ButtonNavigation(text: "Connexion", view: ConnexionView())
+                    }
+                    ButtonNavigation(text: "Catalogue", view: CatalogueView())
+                    ButtonNavigation(text: "Session", view: SessionView())
                     Spacer()
                 }
                 Spacer()
@@ -35,6 +39,6 @@ struct NavigationSelectionView: View {
 
 struct NavigationSelectionView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationSelectionView(selection: routeur())
+        NavigationSelectionView()
     }
 }

@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-class routeur : ObservableObject {
+class Routeur : ObservableObject {
     
-    @Published var selectedRoute: AnyView = AnyView(CatalogueView())
+    @Published var selectedRoute: AnyView = AnyView(ConnexionView())
 
     func getRoute() -> AnyView {
         return AnyView(selectedRoute)

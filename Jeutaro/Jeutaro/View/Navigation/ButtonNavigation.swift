@@ -9,14 +9,15 @@ import SwiftUI
 
 struct ButtonNavigation<Destination : View>: View {
     
-    @ObservedObject var selection: routeur
+    @EnvironmentObject var routeur: Routeur
+    
     let text : String
     let view : Destination
     
     var body: some View {
         HStack {
             Button(action: {
-                selection.setRoute(route: AnyView(view))
+                routeur.setRoute(route: AnyView(view))
             }) {
                 Text(text)
                     .font(.system(size: 20))
@@ -31,6 +32,6 @@ struct ButtonNavigation<Destination : View>: View {
 
 struct ButtonNavigation_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonNavigation(selection: routeur(), text: "Text", view: ConnexionView())
+        ButtonNavigation(text: "Text", view: ConnexionView())
     }
 }

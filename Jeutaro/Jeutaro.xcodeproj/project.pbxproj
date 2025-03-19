@@ -22,9 +22,9 @@
 		B71FF15D2D81A5BC000425C3 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF15C2D81A5BC000425C3 /* SessionView.swift */; };
 		B71FF15E2D81A5BC000425C3 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF15C2D81A5BC000425C3 /* SessionView.swift */; };
 		B71FF15F2D81A5BC000425C3 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF15C2D81A5BC000425C3 /* SessionView.swift */; };
-		B71FF1612D81A90A000425C3 /* routeur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1602D81A909000425C3 /* routeur.swift */; };
-		B71FF1622D81A90A000425C3 /* routeur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1602D81A909000425C3 /* routeur.swift */; };
-		B71FF1632D81A90A000425C3 /* routeur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1602D81A909000425C3 /* routeur.swift */; };
+		B71FF1612D81A90A000425C3 /* Routeur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1602D81A909000425C3 /* Routeur.swift */; };
+		B71FF1622D81A90A000425C3 /* Routeur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1602D81A909000425C3 /* Routeur.swift */; };
+		B71FF1632D81A90A000425C3 /* Routeur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1602D81A909000425C3 /* Routeur.swift */; };
 		B71FF1652D82DC30000425C3 /* NavigationSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1542D81A37D000425C3 /* NavigationSelectionView.swift */; };
 		B71FF1662D82DC30000425C3 /* NavigationSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1542D81A37D000425C3 /* NavigationSelectionView.swift */; };
 		B71FF16A2D82E2CB000425C3 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1692D82E2CB000425C3 /* NavigationView.swift */; };
@@ -36,6 +36,9 @@
 		B71FF17A2D886934000425C3 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1792D886934000425C3 /* SignIn.swift */; };
 		B71FF17C2D8875E7000425C3 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF17B2D8875E7000425C3 /* AuthError.swift */; };
 		B71FF17E2D8878B4000425C3 /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF17D2D8878B4000425C3 /* UserLogin.swift */; };
+		B71FF1812D8881BA000425C3 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1802D8881BA000425C3 /* UserViewModel.swift */; };
+		B71FF1832D8AC2A8000425C3 /* ConnexionSucessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1822D8AC2A8000425C3 /* ConnexionSucessView.swift */; };
+		B71FF1842D8AC2A8000425C3 /* ConnexionSucessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1822D8AC2A8000425C3 /* ConnexionSucessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +73,7 @@
 		B71FF1562D81A57F000425C3 /* ConnexionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnexionView.swift; sourceTree = "<group>"; };
 		B71FF1582D81A5A7000425C3 /* CatalogueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueView.swift; sourceTree = "<group>"; };
 		B71FF15C2D81A5BC000425C3 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
-		B71FF1602D81A909000425C3 /* routeur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = routeur.swift; sourceTree = "<group>"; };
+		B71FF1602D81A909000425C3 /* Routeur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routeur.swift; sourceTree = "<group>"; };
 		B71FF1692D82E2CB000425C3 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		B71FF16C2D82E822000425C3 /* DefineColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineColor.swift; sourceTree = "<group>"; };
 		B71FF16E2D8431FA000425C3 /* ButtonNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNavigation.swift; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 		B71FF1792D886934000425C3 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		B71FF17B2D8875E7000425C3 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		B71FF17D2D8878B4000425C3 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
+		B71FF1802D8881BA000425C3 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		B71FF1822D8AC2A8000425C3 /* ConnexionSucessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnexionSucessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +181,7 @@
 				B71FF1562D81A57F000425C3 /* ConnexionView.swift */,
 				B71FF1582D81A5A7000425C3 /* CatalogueView.swift */,
 				B71FF15C2D81A5BC000425C3 /* SessionView.swift */,
+				B71FF1822D8AC2A8000425C3 /* ConnexionSucessView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +189,7 @@
 		B71FF1522D81A31F000425C3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B71FF1802D8881BA000425C3 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -199,7 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				B71FF1542D81A37D000425C3 /* NavigationSelectionView.swift */,
-				B71FF1602D81A909000425C3 /* routeur.swift */,
+				B71FF1602D81A909000425C3 /* Routeur.swift */,
 				B71FF1692D82E2CB000425C3 /* NavigationView.swift */,
 				B71FF16E2D8431FA000425C3 /* ButtonNavigation.swift */,
 			);
@@ -371,9 +378,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71FF1812D8881BA000425C3 /* UserViewModel.swift in Sources */,
 				B71FF12A2D818FED000425C3 /* ContentView.swift in Sources */,
 				B71FF17A2D886934000425C3 /* SignIn.swift in Sources */,
-				B71FF1612D81A90A000425C3 /* routeur.swift in Sources */,
+				B71FF1612D81A90A000425C3 /* Routeur.swift in Sources */,
 				B71FF16A2D82E2CB000425C3 /* NavigationView.swift in Sources */,
 				B71FF16F2D8431FA000425C3 /* ButtonNavigation.swift in Sources */,
 				B71FF15D2D81A5BC000425C3 /* SessionView.swift in Sources */,
@@ -381,6 +389,7 @@
 				B71FF1722D882D85000425C3 /* AuthService.swift in Sources */,
 				B71FF1552D81A37D000425C3 /* NavigationSelectionView.swift in Sources */,
 				B71FF1592D81A5A7000425C3 /* CatalogueView.swift in Sources */,
+				B71FF1832D8AC2A8000425C3 /* ConnexionSucessView.swift in Sources */,
 				B71FF1752D8839CE000425C3 /* User.swift in Sources */,
 				B71FF17E2D8878B4000425C3 /* UserLogin.swift in Sources */,
 				B71FF1282D818FED000425C3 /* JeutaroApp.swift in Sources */,
@@ -394,7 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B71FF15A2D81A5A7000425C3 /* CatalogueView.swift in Sources */,
-				B71FF1622D81A90A000425C3 /* routeur.swift in Sources */,
+				B71FF1622D81A90A000425C3 /* Routeur.swift in Sources */,
 				B71FF1662D82DC30000425C3 /* NavigationSelectionView.swift in Sources */,
 				B71FF15E2D81A5BC000425C3 /* SessionView.swift in Sources */,
 				B71FF1392D818FEF000425C3 /* JeutaroTests.swift in Sources */,
@@ -408,9 +417,10 @@
 			files = (
 				B71FF1432D818FEF000425C3 /* JeutaroUITests.swift in Sources */,
 				B71FF1452D818FEF000425C3 /* JeutaroUITestsLaunchTests.swift in Sources */,
-				B71FF1632D81A90A000425C3 /* routeur.swift in Sources */,
+				B71FF1632D81A90A000425C3 /* Routeur.swift in Sources */,
 				B71FF15B2D81A5A7000425C3 /* CatalogueView.swift in Sources */,
 				B71FF1652D82DC30000425C3 /* NavigationSelectionView.swift in Sources */,
+				B71FF1842D8AC2A8000425C3 /* ConnexionSucessView.swift in Sources */,
 				B71FF15F2D81A5BC000425C3 /* SessionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +559,7 @@
 		};
 		B71FF1492D818FEF000425C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B71FF1772D8840A5000425C3 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -577,6 +588,7 @@
 		};
 		B71FF14A2D818FEF000425C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B71FF1772D8840A5000425C3 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -9,15 +9,18 @@ import SwiftUI
 
 struct NavigationView: View {
 
-    @ObservedObject var selection: routeur
+    @EnvironmentObject var routeur: Routeur
+
+    var user: User? = nil
 
     var body: some View {
-        selection.getRoute()
+        routeur.getRoute()
     }
 }
 
 struct NavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView(selection: routeur())
+        NavigationView()
+            .environmentObject(Routeur())
     }
 }
