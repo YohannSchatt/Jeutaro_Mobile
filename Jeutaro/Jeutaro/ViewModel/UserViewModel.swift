@@ -22,12 +22,13 @@ class UserViewModel : ObservableObject {
     }
 
     func login(email: String, password: String) async {
+        self.message = ""
         do {
             self.user = try await AuthService.shared.login(email: email, password: password)
             message = "Connexion réussie"
             routeur.setRoute(route: AnyView(ConnexionSucessView()))
         } catch {
-            message = "Échec de connexion : \(error.localizedDescription)"
+            message = "Échec de connexion"
         }
     }
 }

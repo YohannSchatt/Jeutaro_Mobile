@@ -39,6 +39,24 @@
 		B71FF1812D8881BA000425C3 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1802D8881BA000425C3 /* UserViewModel.swift */; };
 		B71FF1832D8AC2A8000425C3 /* ConnexionSucessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1822D8AC2A8000425C3 /* ConnexionSucessView.swift */; };
 		B71FF1842D8AC2A8000425C3 /* ConnexionSucessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1822D8AC2A8000425C3 /* ConnexionSucessView.swift */; };
+		B71FF1862D8C267C000425C3 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1852D8C267C000425C3 /* LoginResponse.swift */; };
+		B71FF1892D8C3071000425C3 /* PageVendeurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1882D8C3071000425C3 /* PageVendeurView.swift */; };
+		B71FF18A2D8C3071000425C3 /* PageVendeurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1882D8C3071000425C3 /* PageVendeurView.swift */; };
+		B71FF18D2D8C3364000425C3 /* SelectionVendeurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF18C2D8C3364000425C3 /* SelectionVendeurView.swift */; };
+		B71FF18E2D8C3364000425C3 /* SelectionVendeurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF18C2D8C3364000425C3 /* SelectionVendeurView.swift */; };
+		B71FF1902D8C337B000425C3 /* ModificationVendeurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF18F2D8C337B000425C3 /* ModificationVendeurView.swift */; };
+		B71FF1912D8C337B000425C3 /* ModificationVendeurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF18F2D8C337B000425C3 /* ModificationVendeurView.swift */; };
+		B71FF1932D8C3505000425C3 /* VendeurViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1922D8C3505000425C3 /* VendeurViewModel.swift */; };
+		B71FF1972D8C6667000425C3 /* VendeurService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1962D8C6667000425C3 /* VendeurService.swift */; };
+		B71FF19A2D8C6696000425C3 /* Vendeur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1992D8C6696000425C3 /* Vendeur.swift */; };
+		B71FF19C2D8C72AA000425C3 /* UniqueVendeurSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF19B2D8C72AA000425C3 /* UniqueVendeurSelectionView.swift */; };
+		B71FF19E2D8DB543000425C3 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF19D2D8DB543000425C3 /* URLSession.swift */; };
+		B71FF1A02D8DB5EF000425C3 /* CookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF19F2D8DB5EF000425C3 /* CookieManager.swift */; };
+		B71FF1A22D8DFB87000425C3 /* VendeurError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1A12D8DFB87000425C3 /* VendeurError.swift */; };
+		B71FF1A42D8E0026000425C3 /* SearchVendeurDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1A32D8E0026000425C3 /* SearchVendeurDto.swift */; };
+		B71FF1A62D8E0B9A000425C3 /* GetVendeurDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1A52D8E0B9A000425C3 /* GetVendeurDto.swift */; };
+		B71FF1A82D8E1BC2000425C3 /* CreateVendeurDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1A72D8E1BC2000425C3 /* CreateVendeurDto.swift */; };
+		B71FF1AA2D8E1C26000425C3 /* UpdateVendeurDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1A92D8E1C26000425C3 /* UpdateVendeurDto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +103,21 @@
 		B71FF17D2D8878B4000425C3 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		B71FF1802D8881BA000425C3 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		B71FF1822D8AC2A8000425C3 /* ConnexionSucessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnexionSucessView.swift; sourceTree = "<group>"; };
+		B71FF1852D8C267C000425C3 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		B71FF1882D8C3071000425C3 /* PageVendeurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVendeurView.swift; sourceTree = "<group>"; };
+		B71FF18C2D8C3364000425C3 /* SelectionVendeurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionVendeurView.swift; sourceTree = "<group>"; };
+		B71FF18F2D8C337B000425C3 /* ModificationVendeurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificationVendeurView.swift; sourceTree = "<group>"; };
+		B71FF1922D8C3505000425C3 /* VendeurViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendeurViewModel.swift; sourceTree = "<group>"; };
+		B71FF1962D8C6667000425C3 /* VendeurService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendeurService.swift; sourceTree = "<group>"; };
+		B71FF1992D8C6696000425C3 /* Vendeur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vendeur.swift; sourceTree = "<group>"; };
+		B71FF19B2D8C72AA000425C3 /* UniqueVendeurSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueVendeurSelectionView.swift; sourceTree = "<group>"; };
+		B71FF19D2D8DB543000425C3 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		B71FF19F2D8DB5EF000425C3 /* CookieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieManager.swift; sourceTree = "<group>"; };
+		B71FF1A12D8DFB87000425C3 /* VendeurError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendeurError.swift; sourceTree = "<group>"; };
+		B71FF1A32D8E0026000425C3 /* SearchVendeurDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVendeurDto.swift; sourceTree = "<group>"; };
+		B71FF1A52D8E0B9A000425C3 /* GetVendeurDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVendeurDto.swift; sourceTree = "<group>"; };
+		B71FF1A72D8E1BC2000425C3 /* CreateVendeurDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVendeurDto.swift; sourceTree = "<group>"; };
+		B71FF1A92D8E1C26000425C3 /* UpdateVendeurDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVendeurDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +210,7 @@
 		B71FF1512D81A311000425C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B71FF18B2D8C307A000425C3 /* GererVendeur */,
 				B71FF1642D82DBFD000425C3 /* Navigation */,
 				B71FF1562D81A57F000425C3 /* ConnexionView.swift */,
 				B71FF1582D81A5A7000425C3 /* CatalogueView.swift */,
@@ -190,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				B71FF1802D8881BA000425C3 /* UserViewModel.swift */,
+				B71FF1922D8C3505000425C3 /* VendeurViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				B71FF1742D8839CE000425C3 /* User.swift */,
+				B71FF1992D8C6696000425C3 /* Vendeur.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,7 +260,10 @@
 		B71FF1702D882C43000425C3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				B71FF1952D8C6653000425C3 /* Vendeur */,
 				B71FF17F2D887903000425C3 /* Authentification */,
+				B71FF19D2D8DB543000425C3 /* URLSession.swift */,
+				B71FF19F2D8DB5EF000425C3 /* CookieManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -232,6 +271,7 @@
 		B71FF1782D88691E000425C3 /* dto */ = {
 			isa = PBXGroup;
 			children = (
+				B71FF1852D8C267C000425C3 /* LoginResponse.swift */,
 				B71FF1792D886934000425C3 /* SignIn.swift */,
 				B71FF17D2D8878B4000425C3 /* UserLogin.swift */,
 			);
@@ -246,6 +286,38 @@
 				B71FF17B2D8875E7000425C3 /* AuthError.swift */,
 			);
 			path = Authentification;
+			sourceTree = "<group>";
+		};
+		B71FF18B2D8C307A000425C3 /* GererVendeur */ = {
+			isa = PBXGroup;
+			children = (
+				B71FF1882D8C3071000425C3 /* PageVendeurView.swift */,
+				B71FF18C2D8C3364000425C3 /* SelectionVendeurView.swift */,
+				B71FF18F2D8C337B000425C3 /* ModificationVendeurView.swift */,
+				B71FF19B2D8C72AA000425C3 /* UniqueVendeurSelectionView.swift */,
+			);
+			path = GererVendeur;
+			sourceTree = "<group>";
+		};
+		B71FF1952D8C6653000425C3 /* Vendeur */ = {
+			isa = PBXGroup;
+			children = (
+				B71FF1982D8C667F000425C3 /* dto */,
+				B71FF1962D8C6667000425C3 /* VendeurService.swift */,
+				B71FF1A12D8DFB87000425C3 /* VendeurError.swift */,
+			);
+			path = Vendeur;
+			sourceTree = "<group>";
+		};
+		B71FF1982D8C667F000425C3 /* dto */ = {
+			isa = PBXGroup;
+			children = (
+				B71FF1A32D8E0026000425C3 /* SearchVendeurDto.swift */,
+				B71FF1A52D8E0B9A000425C3 /* GetVendeurDto.swift */,
+				B71FF1A72D8E1BC2000425C3 /* CreateVendeurDto.swift */,
+				B71FF1A92D8E1C26000425C3 /* UpdateVendeurDto.swift */,
+			);
+			path = dto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,22 +450,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71FF1A22D8DFB87000425C3 /* VendeurError.swift in Sources */,
+				B71FF18D2D8C3364000425C3 /* SelectionVendeurView.swift in Sources */,
+				B71FF1A62D8E0B9A000425C3 /* GetVendeurDto.swift in Sources */,
 				B71FF1812D8881BA000425C3 /* UserViewModel.swift in Sources */,
 				B71FF12A2D818FED000425C3 /* ContentView.swift in Sources */,
+				B71FF1862D8C267C000425C3 /* LoginResponse.swift in Sources */,
 				B71FF17A2D886934000425C3 /* SignIn.swift in Sources */,
 				B71FF1612D81A90A000425C3 /* Routeur.swift in Sources */,
 				B71FF16A2D82E2CB000425C3 /* NavigationView.swift in Sources */,
 				B71FF16F2D8431FA000425C3 /* ButtonNavigation.swift in Sources */,
+				B71FF1A02D8DB5EF000425C3 /* CookieManager.swift in Sources */,
+				B71FF19E2D8DB543000425C3 /* URLSession.swift in Sources */,
+				B71FF1A42D8E0026000425C3 /* SearchVendeurDto.swift in Sources */,
 				B71FF15D2D81A5BC000425C3 /* SessionView.swift in Sources */,
+				B71FF19A2D8C6696000425C3 /* Vendeur.swift in Sources */,
+				B71FF1902D8C337B000425C3 /* ModificationVendeurView.swift in Sources */,
 				B71FF17C2D8875E7000425C3 /* AuthError.swift in Sources */,
 				B71FF1722D882D85000425C3 /* AuthService.swift in Sources */,
 				B71FF1552D81A37D000425C3 /* NavigationSelectionView.swift in Sources */,
+				B71FF1A82D8E1BC2000425C3 /* CreateVendeurDto.swift in Sources */,
+				B71FF1AA2D8E1C26000425C3 /* UpdateVendeurDto.swift in Sources */,
 				B71FF1592D81A5A7000425C3 /* CatalogueView.swift in Sources */,
 				B71FF1832D8AC2A8000425C3 /* ConnexionSucessView.swift in Sources */,
+				B71FF19C2D8C72AA000425C3 /* UniqueVendeurSelectionView.swift in Sources */,
 				B71FF1752D8839CE000425C3 /* User.swift in Sources */,
+				B71FF1932D8C3505000425C3 /* VendeurViewModel.swift in Sources */,
+				B71FF1972D8C6667000425C3 /* VendeurService.swift in Sources */,
 				B71FF17E2D8878B4000425C3 /* UserLogin.swift in Sources */,
 				B71FF1282D818FED000425C3 /* JeutaroApp.swift in Sources */,
 				B71FF1572D81A57F000425C3 /* ConnexionView.swift in Sources */,
+				B71FF1892D8C3071000425C3 /* PageVendeurView.swift in Sources */,
 				B71FF16D2D82E822000425C3 /* DefineColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,11 +503,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B71FF1432D818FEF000425C3 /* JeutaroUITests.swift in Sources */,
+				B71FF18A2D8C3071000425C3 /* PageVendeurView.swift in Sources */,
 				B71FF1452D818FEF000425C3 /* JeutaroUITestsLaunchTests.swift in Sources */,
+				B71FF1912D8C337B000425C3 /* ModificationVendeurView.swift in Sources */,
 				B71FF1632D81A90A000425C3 /* Routeur.swift in Sources */,
 				B71FF15B2D81A5A7000425C3 /* CatalogueView.swift in Sources */,
 				B71FF1652D82DC30000425C3 /* NavigationSelectionView.swift in Sources */,
 				B71FF1842D8AC2A8000425C3 /* ConnexionSucessView.swift in Sources */,
+				B71FF18E2D8C3364000425C3 /* SelectionVendeurView.swift in Sources */,
 				B71FF15F2D81A5BC000425C3 /* SessionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

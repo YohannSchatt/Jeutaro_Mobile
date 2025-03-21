@@ -11,5 +11,5 @@ struct UserLogin : Codable {
     let nom : String
     let prenom : String
     let email : String
-    let Role : Role
+    let role : Role
 }

@@ -11,7 +11,7 @@ struct NavigationSelectionView: View {
 
     @EnvironmentObject var routeur : Routeur
 
-    var user : User? = nil
+    @EnvironmentObject var userViewModel : UserViewModel
 
     var body: some View {
         NavigationStack {
@@ -24,8 +24,11 @@ struct NavigationSelectionView: View {
                         Spacer()
                     }
                     Spacer().frame(maxHeight: 40)
-                    if(user == nil) {
+                    if(userViewModel.user == nil) {
                         ButtonNavigation(text: "Connexion", view: ConnexionView())
+                    }
+                    else {
+                        ButtonNavigation(text: "Gérer Vendeur", view: PageVendeurView())
                     }
                     ButtonNavigation(text: "Catalogue", view: CatalogueView())
                     ButtonNavigation(text: "Session", view: SessionView())

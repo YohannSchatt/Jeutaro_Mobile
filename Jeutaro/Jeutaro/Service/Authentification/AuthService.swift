@@ -7,36 +7,19 @@
 
 import Foundation
 
-extension URLSession {
-    func getJson<T: Decodable>(from request: URLRequest) async throws -> (T, HTTPURLResponse, Data) {
-        let (data, response) = try await data(for: request)
-        guard let httpResponse = response as? HTTPURLResponse else {
-            throw URLError(.badServerResponse)
-        }
-        let decoder = JSONDecoder()
-        let decoded = try decoder.decode(T.self, from: data)
-        return (decoded, httpResponse, data)
-    }
-}
-
 struct AuthService {
     
     static let shared = AuthService()
     
     let apiUrl: String
     
-    private var session: URLSession
-
+    let session = CookieManager.shared.session
+    
     init() {
         guard let apiUrl = ProcessInfo.processInfo.environment["API_URL"] else {
             fatalError("API_URL not set in Config file")
         }
         self.apiUrl = apiUrl + "/auth"
-
-        let config = URLSessionConfiguration.default
-        config.httpCookieStorage = HTTPCookieStorage.shared
-        config.httpCookieAcceptPolicy = .always
-        session = URLSession(configuration: config)
     }
 
     func login(email: String, password: String) async throws -> User {
@@ -49,7 +32,7 @@ struct AuthService {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpShouldHandleCookies = true
         
-        let (result, httpResponse, _) : (UserLogin, HTTPURLResponse, Data) = try await session.getJson(from: request)
+        let (result, httpResponse, _) : (LoginResponse, HTTPURLResponse, Data) = try await session.getJson(from: request)
         
         if httpResponse.statusCode != 200 {
             throw AuthError.Unauthorized
@@ -62,8 +45,7 @@ struct AuthService {
         }
         
         // Construction de l'objet User à partir de la réponse
-        let user = User(nom: result.nom, prenom: result.prenom, email: result.email, role: result.Role)
+        let user = User(nom: result.user.nom, prenom: result.user.prenom, email: result.user.email, role: result.user.role)
         return user
     }
-
 }
