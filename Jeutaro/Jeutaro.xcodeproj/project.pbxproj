@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		348624A82D886B4700BF55DC /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 348624A72D886B4700BF55DC /* Config.xcconfig */; };
 		B71FF1282D818FED000425C3 /* JeutaroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1272D818FED000425C3 /* JeutaroApp.swift */; };
 		B71FF12A2D818FED000425C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1292D818FED000425C3 /* ContentView.swift */; };
 		B71FF12C2D818FEF000425C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B71FF12B2D818FEF000425C3 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		348624A72D886B4700BF55DC /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		B71FF1242D818FED000425C3 /* Jeutaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jeutaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71FF1272D818FED000425C3 /* JeutaroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeutaroApp.swift; sourceTree = "<group>"; };
 		B71FF1292D818FED000425C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		B71FF11B2D818FED000425C3 = {
 			isa = PBXGroup;
 			children = (
+				348624A72D886B4700BF55DC /* Config.xcconfig */,
 				B71FF1262D818FED000425C3 /* Jeutaro */,
 				B71FF1372D818FEF000425C3 /* JeutaroTests */,
 				B71FF1412D818FEF000425C3 /* JeutaroUITests */,
@@ -312,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B71FF12F2D818FEF000425C3 /* Preview Assets.xcassets in Resources */,
+				348624A82D886B4700BF55DC /* Config.xcconfig in Resources */,
 				B71FF12C2D818FEF000425C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +397,7 @@
 /* Begin XCBuildConfiguration section */
 		B71FF1462D818FEF000425C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 348624A72D886B4700BF55DC /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -453,6 +458,7 @@
 		};
 		B71FF1472D818FEF000425C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 348624A72D886B4700BF55DC /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
