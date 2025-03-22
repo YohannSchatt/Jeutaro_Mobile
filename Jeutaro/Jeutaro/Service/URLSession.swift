@@ -19,7 +19,13 @@ extension URLSession {
         } else {
             print("Impossible de convertir les données en chaîne")
         }
-
+        
+        // Si le type T est Void, on ne tente pas de décoder
+        if T.self == Data.self {
+            // Si tu n'as pas besoin de décoder, tu retournes simplement le tuple sans décodage
+            return (data as! T, httpResponse, data) // Forcer la conversion car T est Void
+        }
+        
         let decoder = JSONDecoder()
         let decoded = try decoder.decode(T.self, from: data)
         return (decoded, httpResponse, data)

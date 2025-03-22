@@ -9,8 +9,8 @@ import Foundation
 
 struct SearchVendeurDto : Codable {
     
-    let prenom : String
-    let nom : String
+    let prenom : String?
+    let nom : String?
     let email : String?
-    let numero : String
+    let numero : String?
 }

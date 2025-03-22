@@ -29,6 +29,7 @@ struct NavigationSelectionView: View {
                     }
                     else {
                         ButtonNavigation(text: "Gérer Vendeur", view: PageVendeurView())
+                        ButtonNavigation(text: "Enregistrer un dépot", view: EnregistrerDepot())
                     }
                     ButtonNavigation(text: "Catalogue", view: CatalogueView())
                     ButtonNavigation(text: "Session", view: SessionView())

@@ -20,7 +20,7 @@ struct VendeurService {
         self.apiUrl = apiUrl + "/vendeur"
     }
     
-    func getListVendeur(prenom : String, nom : String, email : String?, numero : String) async throws -> [Vendeur] {
+    func getListVendeur(prenom : String?, nom : String?, email : String?, numero : String?) async throws -> [Vendeur] {
         let url = URL(string: "\(apiUrl)/getListVendeur")!
         var request = URLRequest(url: url)
         
