@@ -121,4 +121,27 @@ struct VendeurService {
         }
         return nil
     }
+    
+    func retraitJeuArgent(enregistrerRetraitJeuArgentDto : EnregistrerRetraitJeuArgentDto) async throws -> Bool {
+        let url = URL(string: "\(apiUrl)/enregistrerRetraitJeuArgent")!
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "POST"
+        request.httpBody = try JSONEncoder().encode(enregistrerRetraitJeuArgentDto)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpShouldHandleCookies = true
+        
+        let (_, httpResponse, _) : (Data, HTTPURLResponse, Data) = try await session.getJson(from: request)
+            
+        if httpResponse.statusCode == 200 {
+            return true
+        }
+        else if httpResponse.statusCode == 401 {
+            throw JeuUnitaireError.Unauthorized
+        }
+        else if httpResponse.statusCode == 500  {
+            throw JeuUnitaireError.ServerError
+        }
+        return false
+    }
 }

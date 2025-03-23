@@ -86,4 +86,25 @@ struct JeuUnitaireService {
         }
         return false
     }
+    
+    func jeuxDisponibleByVendeur(vendeurId : Int) async throws -> [InfoJeuUnitaireDisponibleDto]  {
+        let url = URL(string: "\(apiUrl)/jeuxDisponibleByVendeur/" + String(vendeurId))!
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "GET"
+        request.httpShouldHandleCookies = true
+        
+        let (resultDto, httpResponse, _) : ([InfoJeuUnitaireDisponibleDto], HTTPURLResponse, Data) = try await session.getJson(from: request)
+        
+        if httpResponse.statusCode == 200 {
+            return resultDto
+        }
+        else if httpResponse.statusCode == 401 {
+            throw JeuUnitaireError.Unauthorized
+        }
+        else if httpResponse.statusCode == 500  {
+            throw JeuUnitaireError.ServerError
+        }
+        return []
+    }
 }

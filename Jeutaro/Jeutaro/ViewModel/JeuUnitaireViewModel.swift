@@ -45,8 +45,6 @@ class JeuUnitaireViewModel : ObservableObject {
                             jeu: Jeux(idJeu: -1, nom: elt.nom, editeur: elt.editeur, description: ""))
             })
             
-            print(self.listJeuUnitaire)
-            
         } catch let err as JeuUnitaireError {
             print(err)
         } catch {

@@ -23,18 +23,21 @@ struct NavigationSelectionView: View {
                         Text("Navigation").font(.system(size: 30))
                         Spacer()
                     }
-                    Spacer().frame(maxHeight: 40)
-                    if(userViewModel.user == nil) {
-                        ButtonNavigation(text: "Connexion", view: ConnexionView())
+                    VStack(spacing:0) {
+                        Spacer().frame(maxHeight: 40)
+                        if(userViewModel.user == nil) {
+                            ButtonNavigation(text: "Connexion", view: ConnexionView())
+                        }
+                        else {
+                            ButtonNavigation(text: "Gérer Vendeur", view: PageVendeurView())
+                            ButtonNavigation(text: "Enregistrer un dépot", view: EnregistrerDepotView())
+                            ButtonNavigation(text: "Enregistrer un achat", view: EnregistrerAchatView())
+                            ButtonNavigation(text: "Enregistrer un retrait", view: EnregistrerRetraitView())
+                        }
+                        ButtonNavigation(text: "Catalogue", view: CatalogueView())
+                        ButtonNavigation(text: "Session", view: SessionView())
+                        Spacer()
                     }
-                    else {
-                        ButtonNavigation(text: "Gérer Vendeur", view: PageVendeurView())
-                        ButtonNavigation(text: "Enregistrer un dépot", view: EnregistrerDepotView())
-                        ButtonNavigation(text: "Enregistrer un achat", view: EnregistrerAchatView())
-                    }
-                    ButtonNavigation(text: "Catalogue", view: CatalogueView())
-                    ButtonNavigation(text: "Session", view: SessionView())
-                    Spacer()
                 }
                 Spacer()
             }.background(DefineColor.color2.color)
