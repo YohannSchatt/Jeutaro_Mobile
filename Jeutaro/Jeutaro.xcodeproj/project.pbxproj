@@ -623,20 +623,12 @@
 				B71FF18D2D8C3364000425C3 /* SelectionVendeurView.swift in Sources */,
 				B71FF1A62D8E0B9A000425C3 /* GetVendeurDto.swift in Sources */,
 				B71FF1812D8881BA000425C3 /* UserViewModel.swift in Sources */,
-<<<<<<< HEAD
-				B76D960F2D9051FF0092CAE7 /* EnregistrerAchatDto.swift in Sources */,
-=======
 				3483B1812D90B6C500FA64A3 /* SessionEditView.swift in Sources */,
->>>>>>> 7adcfdd (ajouts de la page de session fonctionnel)
 				B71FF12A2D818FED000425C3 /* ContentView.swift in Sources */,
 				3483B16D2D902BBA00FA64A3 /* SessionService.swift in Sources */,
 				B71FF1862D8C267C000425C3 /* LoginResponse.swift in Sources */,
 				B71FF17A2D886934000425C3 /* SignIn.swift in Sources */,
-<<<<<<< HEAD
-				B76D96192D9068880092CAE7 /* RetraitViewModel.swift in Sources */,
-=======
 				3483B1742D9035E200FA64A3 /* GetSessionDto.swift in Sources */,
->>>>>>> 7adcfdd (ajouts de la page de session fonctionnel)
 				B71FF1612D81A90A000425C3 /* Routeur.swift in Sources */,
 				B71FF16A2D82E2CB000425C3 /* NavigationView.swift in Sources */,
 				B76D96162D9065030092CAE7 /* EnregistrerRetraitView.swift in Sources */,
