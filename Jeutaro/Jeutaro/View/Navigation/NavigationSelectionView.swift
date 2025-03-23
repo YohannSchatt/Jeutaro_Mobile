@@ -29,7 +29,10 @@ struct NavigationSelectionView: View {
                             ButtonNavigation(text: "Connexion", view: ConnexionView())
                         }
                         else {
-                            ButtonNavigation(text: "Gérer Vendeur", view: PageVendeurView())
+                            if (userViewModel.user!.getRole() == .ADMIN) {
+                                ButtonNavigation(text: "Gérer gestionnaire", view: PageGestionGestionnaireView())
+                            }
+                            ButtonNavigation(text: "Gérer vendeur", view: PageVendeurView())
                             ButtonNavigation(text: "Enregistrer un dépot", view: EnregistrerDepotView())
                             ButtonNavigation(text: "Enregistrer un achat", view: EnregistrerAchatView())
                             ButtonNavigation(text: "Enregistrer un retrait", view: EnregistrerRetraitView())

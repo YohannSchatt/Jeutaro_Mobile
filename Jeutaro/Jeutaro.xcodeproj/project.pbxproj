@@ -81,6 +81,11 @@
 		B76D96192D9068880092CAE7 /* RetraitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D96182D9068880092CAE7 /* RetraitViewModel.swift */; };
 		B76D961A2D9068880092CAE7 /* RetraitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D96182D9068880092CAE7 /* RetraitViewModel.swift */; };
 		B76D961C2D90B2790092CAE7 /* EnregistrerRetraitJeuArgentDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D961B2D90B2790092CAE7 /* EnregistrerRetraitJeuArgentDto.swift */; };
+		B76D96232D90BE6D0092CAE7 /* PageGestionGestionnaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D96222D90BE6D0092CAE7 /* PageGestionGestionnaireView.swift */; };
+		B76D96272D90BEE50092CAE7 /* CreationGestionnaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D96262D90BEE50092CAE7 /* CreationGestionnaireView.swift */; };
+		B76D96282D90BEE50092CAE7 /* CreationGestionnaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D96262D90BEE50092CAE7 /* CreationGestionnaireView.swift */; };
+		B76D962A2D90BF040092CAE7 /* DeleteGestionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D96292D90BF040092CAE7 /* DeleteGestionnaire.swift */; };
+		B76D962B2D90BF040092CAE7 /* DeleteGestionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D96292D90BF040092CAE7 /* DeleteGestionnaire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +166,9 @@
 		B76D96152D9065030092CAE7 /* EnregistrerRetraitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnregistrerRetraitView.swift; sourceTree = "<group>"; };
 		B76D96182D9068880092CAE7 /* RetraitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetraitViewModel.swift; sourceTree = "<group>"; };
 		B76D961B2D90B2790092CAE7 /* EnregistrerRetraitJeuArgentDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnregistrerRetraitJeuArgentDto.swift; sourceTree = "<group>"; };
+		B76D96222D90BE6D0092CAE7 /* PageGestionGestionnaireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageGestionGestionnaireView.swift; sourceTree = "<group>"; };
+		B76D96262D90BEE50092CAE7 /* CreationGestionnaireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationGestionnaireView.swift; sourceTree = "<group>"; };
+		B76D96292D90BF040092CAE7 /* DeleteGestionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGestionnaire.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +261,7 @@
 		B71FF1512D81A311000425C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B76D96212D90BE4B0092CAE7 /* GererGestionnaire */,
 				B71FF1AB2D8F0EF1000425C3 /* GererJeu */,
 				B71FF18B2D8C307A000425C3 /* GererVendeur */,
 				B71FF1642D82DBFD000425C3 /* Navigation */,
@@ -430,6 +439,16 @@
 			path = dto;
 			sourceTree = "<group>";
 		};
+		B76D96212D90BE4B0092CAE7 /* GererGestionnaire */ = {
+			isa = PBXGroup;
+			children = (
+				B76D96222D90BE6D0092CAE7 /* PageGestionGestionnaireView.swift */,
+				B76D96262D90BEE50092CAE7 /* CreationGestionnaireView.swift */,
+				B76D96292D90BF040092CAE7 /* DeleteGestionnaire.swift */,
+			);
+			path = GererGestionnaire;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -564,7 +583,9 @@
 				B71FF1A22D8DFB87000425C3 /* VendeurError.swift in Sources */,
 				B76D960D2D8F64ED0092CAE7 /* InfoJeuUnitaireDisponibleDto.swift in Sources */,
 				B71FF18D2D8C3364000425C3 /* SelectionVendeurView.swift in Sources */,
+				B76D962A2D90BF040092CAE7 /* DeleteGestionnaire.swift in Sources */,
 				B71FF1A62D8E0B9A000425C3 /* GetVendeurDto.swift in Sources */,
+				B76D96272D90BEE50092CAE7 /* CreationGestionnaireView.swift in Sources */,
 				B71FF1812D8881BA000425C3 /* UserViewModel.swift in Sources */,
 				B76D960F2D9051FF0092CAE7 /* EnregistrerAchatDto.swift in Sources */,
 				B71FF12A2D818FED000425C3 /* ContentView.swift in Sources */,
@@ -590,6 +611,7 @@
 				B71FF1C02D8F1BAC000425C3 /* JeuxViewModel.swift in Sources */,
 				B76D960B2D8F633C0092CAE7 /* JeuUnitaireViewModel.swift in Sources */,
 				B71FF1A82D8E1BC2000425C3 /* CreateVendeurDto.swift in Sources */,
+				B76D96232D90BE6D0092CAE7 /* PageGestionGestionnaireView.swift in Sources */,
 				B71FF1AA2D8E1C26000425C3 /* UpdateVendeurDto.swift in Sources */,
 				B71FF1C62D8F2961000425C3 /* InfoJeuDBDto.swift in Sources */,
 				B71FF1B12D8F0F80000425C3 /* Etat.swift in Sources */,
@@ -632,6 +654,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B76D961A2D9068880092CAE7 /* RetraitViewModel.swift in Sources */,
+				B76D96282D90BEE50092CAE7 /* CreationGestionnaireView.swift in Sources */,
 				B71FF1432D818FEF000425C3 /* JeutaroUITests.swift in Sources */,
 				B71FF18A2D8C3071000425C3 /* PageVendeurView.swift in Sources */,
 				B71FF1452D818FEF000425C3 /* JeutaroUITestsLaunchTests.swift in Sources */,
@@ -640,6 +663,7 @@
 				B76D96172D9065030092CAE7 /* EnregistrerRetraitView.swift in Sources */,
 				B71FF1632D81A90A000425C3 /* Routeur.swift in Sources */,
 				B71FF1AE2D8F0F0F000425C3 /* EnregistrerDepotVIew.swift in Sources */,
+				B76D962B2D90BF040092CAE7 /* DeleteGestionnaire.swift in Sources */,
 				B71FF15B2D81A5A7000425C3 /* CatalogueView.swift in Sources */,
 				B71FF1B22D8F0F80000425C3 /* Etat.swift in Sources */,
 				B71FF1652D82DC30000425C3 /* NavigationSelectionView.swift in Sources */,
