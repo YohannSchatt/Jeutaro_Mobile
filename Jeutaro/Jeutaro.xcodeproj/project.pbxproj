@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3483B16D2D902BBA00FA64A3 /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3483B16C2D902BBA00FA64A3 /* SessionService.swift */; };
+		3483B16F2D902E0C00FA64A3 /* SessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3483B16E2D902E0C00FA64A3 /* SessionError.swift */; };
+		3483B1722D9030F700FA64A3 /* CreateSessionDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3483B1712D9030F700FA64A3 /* CreateSessionDto.swift */; };
+		3483B1742D9035E200FA64A3 /* GetSessionDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3483B1732D9035E200FA64A3 /* GetSessionDto.swift */; };
+		3483B1792D90380900FA64A3 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3483B1782D90380900FA64A3 /* Session.swift */; };
+		3483B17B2D90A84F00FA64A3 /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3483B17A2D90A84F00FA64A3 /* SessionViewModel.swift */; };
+		3483B17D2D90B5D200FA64A3 /* SessionEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3483B17C2D90B5D200FA64A3 /* SessionEditViewModel.swift */; };
+		3483B17F2D90B62900FA64A3 /* SessionManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3483B17E2D90B62900FA64A3 /* SessionManagementView.swift */; };
+		3483B1812D90B6C500FA64A3 /* SessionEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3483B1802D90B6C500FA64A3 /* SessionEditView.swift */; };
 		B71FF1282D818FED000425C3 /* JeutaroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1272D818FED000425C3 /* JeutaroApp.swift */; };
 		B71FF12A2D818FED000425C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1292D818FED000425C3 /* ContentView.swift */; };
 		B71FF12C2D818FEF000425C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B71FF12B2D818FEF000425C3 /* Assets.xcassets */; };
@@ -20,8 +29,6 @@
 		B71FF15A2D81A5A7000425C3 /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1582D81A5A7000425C3 /* CatalogueView.swift */; };
 		B71FF15B2D81A5A7000425C3 /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1582D81A5A7000425C3 /* CatalogueView.swift */; };
 		B71FF15D2D81A5BC000425C3 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF15C2D81A5BC000425C3 /* SessionView.swift */; };
-		B71FF15E2D81A5BC000425C3 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF15C2D81A5BC000425C3 /* SessionView.swift */; };
-		B71FF15F2D81A5BC000425C3 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF15C2D81A5BC000425C3 /* SessionView.swift */; };
 		B71FF1612D81A90A000425C3 /* Routeur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1602D81A909000425C3 /* Routeur.swift */; };
 		B71FF1622D81A90A000425C3 /* Routeur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1602D81A909000425C3 /* Routeur.swift */; };
 		B71FF1632D81A90A000425C3 /* Routeur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1602D81A909000425C3 /* Routeur.swift */; };
@@ -101,6 +108,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3483B16C2D902BBA00FA64A3 /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
+		3483B16E2D902E0C00FA64A3 /* SessionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionError.swift; sourceTree = "<group>"; };
+		3483B1712D9030F700FA64A3 /* CreateSessionDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionDto.swift; sourceTree = "<group>"; };
+		3483B1732D9035E200FA64A3 /* GetSessionDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSessionDto.swift; sourceTree = "<group>"; };
+		3483B1782D90380900FA64A3 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		3483B17A2D90A84F00FA64A3 /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
+		3483B17C2D90B5D200FA64A3 /* SessionEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEditViewModel.swift; sourceTree = "<group>"; };
+		3483B17E2D90B62900FA64A3 /* SessionManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagementView.swift; sourceTree = "<group>"; };
+		3483B1802D90B6C500FA64A3 /* SessionEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEditView.swift; sourceTree = "<group>"; };
 		B71FF1242D818FED000425C3 /* Jeutaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jeutaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71FF1272D818FED000425C3 /* JeutaroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeutaroApp.swift; sourceTree = "<group>"; };
 		B71FF1292D818FED000425C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -188,6 +204,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3483B16B2D902B5800FA64A3 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				3483B1702D902EBA00FA64A3 /* dto */,
+				3483B16C2D902BBA00FA64A3 /* SessionService.swift */,
+				3483B16E2D902E0C00FA64A3 /* SessionError.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		3483B1702D902EBA00FA64A3 /* dto */ = {
+			isa = PBXGroup;
+			children = (
+				3483B1712D9030F700FA64A3 /* CreateSessionDto.swift */,
+				3483B1732D9035E200FA64A3 /* GetSessionDto.swift */,
+			);
+			path = dto;
+			sourceTree = "<group>";
+		};
+		3483B1822D90C3B400FA64A3 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				3483B17C2D90B5D200FA64A3 /* SessionEditViewModel.swift */,
+				3483B17A2D90A84F00FA64A3 /* SessionViewModel.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		3483B1832D90C40600FA64A3 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				3483B17E2D90B62900FA64A3 /* SessionManagementView.swift */,
+				B71FF15C2D81A5BC000425C3 /* SessionView.swift */,
+				3483B1802D90B6C500FA64A3 /* SessionEditView.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
 		B71FF11B2D818FED000425C3 = {
 			isa = PBXGroup;
 			children = (
@@ -253,12 +307,12 @@
 		B71FF1512D81A311000425C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3483B1832D90C40600FA64A3 /* Session */,
 				B71FF1AB2D8F0EF1000425C3 /* GererJeu */,
 				B71FF18B2D8C307A000425C3 /* GererVendeur */,
 				B71FF1642D82DBFD000425C3 /* Navigation */,
 				B71FF1562D81A57F000425C3 /* ConnexionView.swift */,
 				B71FF1582D81A5A7000425C3 /* CatalogueView.swift */,
-				B71FF15C2D81A5BC000425C3 /* SessionView.swift */,
 				B71FF1822D8AC2A8000425C3 /* ConnexionSucessView.swift */,
 			);
 			path = View;
@@ -267,6 +321,7 @@
 		B71FF1522D81A31F000425C3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3483B1822D90C3B400FA64A3 /* Session */,
 				B71FF1BF2D8F1BAC000425C3 /* JeuxViewModel.swift */,
 				B71FF1802D8881BA000425C3 /* UserViewModel.swift */,
 				B71FF1922D8C3505000425C3 /* VendeurViewModel.swift */,
@@ -284,6 +339,7 @@
 				B71FF1992D8C6696000425C3 /* Vendeur.swift */,
 				B71FF1C12D8F1EC5000425C3 /* JeuUnitaire.swift */,
 				B71FF1C32D8F1ECE000425C3 /* Jeux.swift */,
+				3483B1782D90380900FA64A3 /* Session.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,6 +366,7 @@
 		B71FF1702D882C43000425C3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				3483B16B2D902B5800FA64A3 /* Session */,
 				B71FF1B42D8F1793000425C3 /* Jeux */,
 				B71FF1B32D8F1770000425C3 /* JeuUnitaire */,
 				B71FF1952D8C6653000425C3 /* Vendeur */,
@@ -566,20 +623,31 @@
 				B71FF18D2D8C3364000425C3 /* SelectionVendeurView.swift in Sources */,
 				B71FF1A62D8E0B9A000425C3 /* GetVendeurDto.swift in Sources */,
 				B71FF1812D8881BA000425C3 /* UserViewModel.swift in Sources */,
+<<<<<<< HEAD
 				B76D960F2D9051FF0092CAE7 /* EnregistrerAchatDto.swift in Sources */,
+=======
+				3483B1812D90B6C500FA64A3 /* SessionEditView.swift in Sources */,
+>>>>>>> 7adcfdd (ajouts de la page de session fonctionnel)
 				B71FF12A2D818FED000425C3 /* ContentView.swift in Sources */,
+				3483B16D2D902BBA00FA64A3 /* SessionService.swift in Sources */,
 				B71FF1862D8C267C000425C3 /* LoginResponse.swift in Sources */,
 				B71FF17A2D886934000425C3 /* SignIn.swift in Sources */,
+<<<<<<< HEAD
 				B76D96192D9068880092CAE7 /* RetraitViewModel.swift in Sources */,
+=======
+				3483B1742D9035E200FA64A3 /* GetSessionDto.swift in Sources */,
+>>>>>>> 7adcfdd (ajouts de la page de session fonctionnel)
 				B71FF1612D81A90A000425C3 /* Routeur.swift in Sources */,
 				B71FF16A2D82E2CB000425C3 /* NavigationView.swift in Sources */,
 				B76D96162D9065030092CAE7 /* EnregistrerRetraitView.swift in Sources */,
 				B71FF1C22D8F1EC5000425C3 /* JeuUnitaire.swift in Sources */,
 				B71FF16F2D8431FA000425C3 /* ButtonNavigation.swift in Sources */,
 				B71FF1A02D8DB5EF000425C3 /* CookieManager.swift in Sources */,
+				3483B17D2D90B5D200FA64A3 /* SessionEditViewModel.swift in Sources */,
 				B71FF19E2D8DB543000425C3 /* URLSession.swift in Sources */,
 				B71FF1C42D8F1ECF000425C3 /* Jeux.swift in Sources */,
 				B71FF1A42D8E0026000425C3 /* SearchVendeurDto.swift in Sources */,
+				3483B16F2D902E0C00FA64A3 /* SessionError.swift in Sources */,
 				B71FF15D2D81A5BC000425C3 /* SessionView.swift in Sources */,
 				B71FF19A2D8C6696000425C3 /* Vendeur.swift in Sources */,
 				B71FF1902D8C337B000425C3 /* ModificationVendeurView.swift in Sources */,
@@ -605,11 +673,15 @@
 				B76D961C2D90B2790092CAE7 /* EnregistrerRetraitJeuArgentDto.swift in Sources */,
 				B71FF17E2D8878B4000425C3 /* UserLogin.swift in Sources */,
 				B71FF1282D818FED000425C3 /* JeutaroApp.swift in Sources */,
+				3483B17B2D90A84F00FA64A3 /* SessionViewModel.swift in Sources */,
 				B71FF1572D81A57F000425C3 /* ConnexionView.swift in Sources */,
+				3483B1722D9030F700FA64A3 /* CreateSessionDto.swift in Sources */,
 				B71FF1B62D8F17A9000425C3 /* JeuUnitaireService.swift in Sources */,
 				B71FF1BA2D8F17E6000425C3 /* JeuxService.swift in Sources */,
 				B71FF1892D8C3071000425C3 /* PageVendeurView.swift in Sources */,
 				B71FF1BE2D8F1ACD000425C3 /* Statut.swift in Sources */,
+				3483B1792D90380900FA64A3 /* Session.swift in Sources */,
+				3483B17F2D90B62900FA64A3 /* SessionManagementView.swift in Sources */,
 				B71FF16D2D82E822000425C3 /* DefineColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,7 +693,6 @@
 				B71FF15A2D81A5A7000425C3 /* CatalogueView.swift in Sources */,
 				B71FF1622D81A90A000425C3 /* Routeur.swift in Sources */,
 				B71FF1662D82DC30000425C3 /* NavigationSelectionView.swift in Sources */,
-				B71FF15E2D81A5BC000425C3 /* SessionView.swift in Sources */,
 				B71FF1392D818FEF000425C3 /* JeutaroTests.swift in Sources */,
 				B71FF1762D8839CE000425C3 /* User.swift in Sources */,
 			);
@@ -645,7 +716,6 @@
 				B71FF1652D82DC30000425C3 /* NavigationSelectionView.swift in Sources */,
 				B71FF1842D8AC2A8000425C3 /* ConnexionSucessView.swift in Sources */,
 				B71FF18E2D8C3364000425C3 /* SelectionVendeurView.swift in Sources */,
-				B71FF15F2D81A5BC000425C3 /* SessionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
