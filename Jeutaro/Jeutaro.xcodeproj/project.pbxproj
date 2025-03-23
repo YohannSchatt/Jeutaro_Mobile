@@ -57,8 +57,8 @@
 		B71FF1A62D8E0B9A000425C3 /* GetVendeurDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1A52D8E0B9A000425C3 /* GetVendeurDto.swift */; };
 		B71FF1A82D8E1BC2000425C3 /* CreateVendeurDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1A72D8E1BC2000425C3 /* CreateVendeurDto.swift */; };
 		B71FF1AA2D8E1C26000425C3 /* UpdateVendeurDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1A92D8E1C26000425C3 /* UpdateVendeurDto.swift */; };
-		B71FF1AD2D8F0F0F000425C3 /* EnregistrerDepot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1AC2D8F0F0F000425C3 /* EnregistrerDepot.swift */; };
-		B71FF1AE2D8F0F0F000425C3 /* EnregistrerDepot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1AC2D8F0F0F000425C3 /* EnregistrerDepot.swift */; };
+		B71FF1AD2D8F0F0F000425C3 /* EnregistrerDepotVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1AC2D8F0F0F000425C3 /* EnregistrerDepotVIew.swift */; };
+		B71FF1AE2D8F0F0F000425C3 /* EnregistrerDepotVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1AC2D8F0F0F000425C3 /* EnregistrerDepotVIew.swift */; };
 		B71FF1B12D8F0F80000425C3 /* Etat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1B02D8F0F80000425C3 /* Etat.swift */; };
 		B71FF1B22D8F0F80000425C3 /* Etat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1B02D8F0F80000425C3 /* Etat.swift */; };
 		B71FF1B62D8F17A9000425C3 /* JeuUnitaireService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1B52D8F17A9000425C3 /* JeuUnitaireService.swift */; };
@@ -71,6 +71,11 @@
 		B71FF1C62D8F2961000425C3 /* InfoJeuDBDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1C52D8F2961000425C3 /* InfoJeuDBDto.swift */; };
 		B71FF1C82D8F2ECF000425C3 /* JeuUnitaireError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1C72D8F2ECF000425C3 /* JeuUnitaireError.swift */; };
 		B71FF1CA2D8F2EDB000425C3 /* JeuxError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1C92D8F2EDB000425C3 /* JeuxError.swift */; };
+		B76D96082D8F615E0092CAE7 /* EnregistrerAchatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D96072D8F615E0092CAE7 /* EnregistrerAchatView.swift */; };
+		B76D96092D8F615E0092CAE7 /* EnregistrerAchatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D96072D8F615E0092CAE7 /* EnregistrerAchatView.swift */; };
+		B76D960B2D8F633C0092CAE7 /* JeuUnitaireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D960A2D8F633C0092CAE7 /* JeuUnitaireViewModel.swift */; };
+		B76D960D2D8F64ED0092CAE7 /* InfoJeuUnitaireDisponibleDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D960C2D8F64ED0092CAE7 /* InfoJeuUnitaireDisponibleDto.swift */; };
+		B76D960F2D9051FF0092CAE7 /* EnregistrerAchatDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D960E2D9051FF0092CAE7 /* EnregistrerAchatDto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,7 +137,7 @@
 		B71FF1A52D8E0B9A000425C3 /* GetVendeurDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVendeurDto.swift; sourceTree = "<group>"; };
 		B71FF1A72D8E1BC2000425C3 /* CreateVendeurDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVendeurDto.swift; sourceTree = "<group>"; };
 		B71FF1A92D8E1C26000425C3 /* UpdateVendeurDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVendeurDto.swift; sourceTree = "<group>"; };
-		B71FF1AC2D8F0F0F000425C3 /* EnregistrerDepot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnregistrerDepot.swift; sourceTree = "<group>"; };
+		B71FF1AC2D8F0F0F000425C3 /* EnregistrerDepotVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnregistrerDepotVIew.swift; sourceTree = "<group>"; };
 		B71FF1B02D8F0F80000425C3 /* Etat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etat.swift; sourceTree = "<group>"; };
 		B71FF1B52D8F17A9000425C3 /* JeuUnitaireService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeuUnitaireService.swift; sourceTree = "<group>"; };
 		B71FF1B92D8F17E6000425C3 /* JeuxService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeuxService.swift; sourceTree = "<group>"; };
@@ -144,6 +149,10 @@
 		B71FF1C52D8F2961000425C3 /* InfoJeuDBDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoJeuDBDto.swift; sourceTree = "<group>"; };
 		B71FF1C72D8F2ECF000425C3 /* JeuUnitaireError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeuUnitaireError.swift; sourceTree = "<group>"; };
 		B71FF1C92D8F2EDB000425C3 /* JeuxError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeuxError.swift; sourceTree = "<group>"; };
+		B76D96072D8F615E0092CAE7 /* EnregistrerAchatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnregistrerAchatView.swift; sourceTree = "<group>"; };
+		B76D960A2D8F633C0092CAE7 /* JeuUnitaireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeuUnitaireViewModel.swift; sourceTree = "<group>"; };
+		B76D960C2D8F64ED0092CAE7 /* InfoJeuUnitaireDisponibleDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoJeuUnitaireDisponibleDto.swift; sourceTree = "<group>"; };
+		B76D960E2D9051FF0092CAE7 /* EnregistrerAchatDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnregistrerAchatDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +262,7 @@
 				B71FF1BF2D8F1BAC000425C3 /* JeuxViewModel.swift */,
 				B71FF1802D8881BA000425C3 /* UserViewModel.swift */,
 				B71FF1922D8C3505000425C3 /* VendeurViewModel.swift */,
+				B76D960A2D8F633C0092CAE7 /* JeuUnitaireViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -356,7 +366,8 @@
 		B71FF1AB2D8F0EF1000425C3 /* GererJeu */ = {
 			isa = PBXGroup;
 			children = (
-				B71FF1AC2D8F0F0F000425C3 /* EnregistrerDepot.swift */,
+				B71FF1AC2D8F0F0F000425C3 /* EnregistrerDepotVIew.swift */,
+				B76D96072D8F615E0092CAE7 /* EnregistrerAchatView.swift */,
 			);
 			path = GererJeu;
 			sourceTree = "<group>";
@@ -394,6 +405,8 @@
 			isa = PBXGroup;
 			children = (
 				B71FF1BB2D8F182D000425C3 /* CreateJeuUnitaireDto.swift */,
+				B76D960C2D8F64ED0092CAE7 /* InfoJeuUnitaireDisponibleDto.swift */,
+				B76D960E2D9051FF0092CAE7 /* EnregistrerAchatDto.swift */,
 			);
 			path = dto;
 			sourceTree = "<group>";
@@ -538,9 +551,11 @@
 			files = (
 				B71FF1CA2D8F2EDB000425C3 /* JeuxError.swift in Sources */,
 				B71FF1A22D8DFB87000425C3 /* VendeurError.swift in Sources */,
+				B76D960D2D8F64ED0092CAE7 /* InfoJeuUnitaireDisponibleDto.swift in Sources */,
 				B71FF18D2D8C3364000425C3 /* SelectionVendeurView.swift in Sources */,
 				B71FF1A62D8E0B9A000425C3 /* GetVendeurDto.swift in Sources */,
 				B71FF1812D8881BA000425C3 /* UserViewModel.swift in Sources */,
+				B76D960F2D9051FF0092CAE7 /* EnregistrerAchatDto.swift in Sources */,
 				B71FF12A2D818FED000425C3 /* ContentView.swift in Sources */,
 				B71FF1862D8C267C000425C3 /* LoginResponse.swift in Sources */,
 				B71FF17A2D886934000425C3 /* SignIn.swift in Sources */,
@@ -558,7 +573,9 @@
 				B71FF17C2D8875E7000425C3 /* AuthError.swift in Sources */,
 				B71FF1722D882D85000425C3 /* AuthService.swift in Sources */,
 				B71FF1552D81A37D000425C3 /* NavigationSelectionView.swift in Sources */,
+				B76D96082D8F615E0092CAE7 /* EnregistrerAchatView.swift in Sources */,
 				B71FF1C02D8F1BAC000425C3 /* JeuxViewModel.swift in Sources */,
+				B76D960B2D8F633C0092CAE7 /* JeuUnitaireViewModel.swift in Sources */,
 				B71FF1A82D8E1BC2000425C3 /* CreateVendeurDto.swift in Sources */,
 				B71FF1AA2D8E1C26000425C3 /* UpdateVendeurDto.swift in Sources */,
 				B71FF1C62D8F2961000425C3 /* InfoJeuDBDto.swift in Sources */,
@@ -571,7 +588,7 @@
 				B71FF1752D8839CE000425C3 /* User.swift in Sources */,
 				B71FF1932D8C3505000425C3 /* VendeurViewModel.swift in Sources */,
 				B71FF1972D8C6667000425C3 /* VendeurService.swift in Sources */,
-				B71FF1AD2D8F0F0F000425C3 /* EnregistrerDepot.swift in Sources */,
+				B71FF1AD2D8F0F0F000425C3 /* EnregistrerDepotVIew.swift in Sources */,
 				B71FF17E2D8878B4000425C3 /* UserLogin.swift in Sources */,
 				B71FF1282D818FED000425C3 /* JeutaroApp.swift in Sources */,
 				B71FF1572D81A57F000425C3 /* ConnexionView.swift in Sources */,
@@ -603,9 +620,10 @@
 				B71FF1432D818FEF000425C3 /* JeutaroUITests.swift in Sources */,
 				B71FF18A2D8C3071000425C3 /* PageVendeurView.swift in Sources */,
 				B71FF1452D818FEF000425C3 /* JeutaroUITestsLaunchTests.swift in Sources */,
+				B76D96092D8F615E0092CAE7 /* EnregistrerAchatView.swift in Sources */,
 				B71FF1912D8C337B000425C3 /* ModificationVendeurView.swift in Sources */,
 				B71FF1632D81A90A000425C3 /* Routeur.swift in Sources */,
-				B71FF1AE2D8F0F0F000425C3 /* EnregistrerDepot.swift in Sources */,
+				B71FF1AE2D8F0F0F000425C3 /* EnregistrerDepotVIew.swift in Sources */,
 				B71FF15B2D81A5A7000425C3 /* CatalogueView.swift in Sources */,
 				B71FF1B22D8F0F80000425C3 /* Etat.swift in Sources */,
 				B71FF1652D82DC30000425C3 /* NavigationSelectionView.swift in Sources */,

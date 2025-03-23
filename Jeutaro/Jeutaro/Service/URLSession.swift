@@ -14,12 +14,6 @@ extension URLSession {
             throw URLError(.badServerResponse)
         }
         
-        if let jsonString = String(data: data, encoding: .utf8) {
-            print("JSON reçu : \(jsonString)")
-        } else {
-            print("Impossible de convertir les données en chaîne")
-        }
-        
         // Si le type T est Void, on ne tente pas de décoder
         if T.self == Data.self {
             // Si tu n'as pas besoin de décoder, tu retournes simplement le tuple sans décodage

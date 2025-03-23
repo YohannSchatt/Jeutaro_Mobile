@@ -19,9 +19,11 @@ struct JeuUnitaire {
     
     var etat : Etat
     
-    let idVendeur : Int
+    let idVendeur : Int?
     
-    let idJeu : Int
+    let idJeu : Int?
+    
+    let jeu : Jeux?
 
     init(idJeuUnitaire : Int, prix : Float, statut : Statut, dateAchat : Date?, etat : Etat, idVendeur : Int, idJeu : Int) {
         self.idJeuUnitaire = idJeuUnitaire
@@ -31,6 +33,18 @@ struct JeuUnitaire {
         self.etat = etat
         self.idVendeur = idVendeur
         self.idJeu = idJeu
+        self.jeu = nil
+    }
+    
+    init(idJeuUnitaire : Int, prix : Float, statut : Statut, dateAchat : Date?, etat : Etat, jeu : Jeux) {
+        self.idJeuUnitaire = idJeuUnitaire
+        self.prix = prix
+        self.statut = statut
+        self.dateAchat = dateAchat
+        self.etat = etat
+        self.idVendeur = nil
+        self.idJeu = nil
+        self.jeu = jeu
     }
 
     func getIdJeuUnitaire() -> Int {
@@ -53,11 +67,11 @@ struct JeuUnitaire {
         return self.etat
     }
 
-    func getIdVendeur() -> Int {
+    func getIdVendeur() -> Int? {
         return self.idVendeur
     }
 
-    func getIdJeu() -> Int {
+    func getIdJeu() -> Int? {
         return self.idJeu
     }
 

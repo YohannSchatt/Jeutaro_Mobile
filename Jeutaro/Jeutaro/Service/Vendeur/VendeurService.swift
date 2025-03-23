@@ -40,9 +40,9 @@ struct VendeurService {
                     nom: dto.nom,
                     email: dto.email,
                     numero: dto.numero,
-                    sommeTotale: Int(dto.sommeTotale)!,
-                    sommeDue: Int(dto.sommeDue)!,
-                    sommeRetire: Int(dto.sommeRetire)!
+                    sommeTotale: Float(dto.sommeTotale) ?? 0.0,
+                    sommeDue: Float(dto.sommeDue) ?? 0.0,
+                    sommeRetire: Float(dto.sommeRetire) ?? 0.0
                 )
             }
             return vendeurs
@@ -75,9 +75,9 @@ struct VendeurService {
                 nom: resultDto.nom,
                 email: resultDto.email,
                 numero: resultDto.numero,
-                sommeTotale: Int(resultDto.sommeTotale)!,
-                sommeDue: Int(resultDto.sommeDue)!,
-                sommeRetire: Int(resultDto.sommeRetire)!
+                sommeTotale: Float(resultDto.sommeTotale) ?? 0.0,
+                sommeDue: Float(resultDto.sommeDue) ?? 0.0,
+                sommeRetire: Float(resultDto.sommeRetire) ?? 0.0
             )
         }
         else if httpResponse.statusCode == 401 {
@@ -108,9 +108,9 @@ struct VendeurService {
                 nom: resultDto.nom,
                 email: resultDto.email,
                 numero: resultDto.numero,
-                sommeTotale: Int(resultDto.sommeTotale)!,
-                sommeDue: Int(resultDto.sommeDue)!,
-                sommeRetire: Int(resultDto.sommeRetire)!
+                sommeTotale: Float(resultDto.sommeTotale) ?? 0.0,
+                sommeDue: Float(resultDto.sommeDue) ?? 0.0,
+                sommeRetire: Float(resultDto.sommeRetire) ?? 0.0
             )
         }
         else if httpResponse.statusCode == 401 {

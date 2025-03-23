@@ -10,6 +10,7 @@ import Foundation
 enum JeuUnitaireError : Error {
     case ServerError
     case Unauthorized
+    case EncodingError
     
     var description : String {
         switch self {
@@ -17,6 +18,8 @@ enum JeuUnitaireError : Error {
             return "Erreur du serveur"
         case .Unauthorized:
             return "Veuillez vous connecter"
+        case .EncodingError:
+            return"Error d'encoding"
         }
     }
 }

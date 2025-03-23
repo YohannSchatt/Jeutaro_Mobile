@@ -19,7 +19,7 @@ struct GetVendeurDto : Codable {
     var numero : String
     
     var sommeTotale : String
-    
+
     var sommeDue : String
     
     var sommeRetire : String

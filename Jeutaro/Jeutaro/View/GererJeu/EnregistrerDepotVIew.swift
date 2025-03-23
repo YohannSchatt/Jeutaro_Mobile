@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EnregistrerDepot: View {
+struct EnregistrerDepotView: View {
     
     @State var email: String = ""
     @State var nom: String = ""
@@ -176,6 +176,6 @@ struct EnregistrerDepot: View {
 
 struct EnregistrerDepot_Previews: PreviewProvider {
     static var previews: some View {
-        EnregistrerDepot()
+        EnregistrerDepotView()
     }
 }

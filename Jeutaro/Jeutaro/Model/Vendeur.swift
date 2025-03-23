@@ -19,11 +19,11 @@ struct Vendeur {
     
     var numero : String
     
-    var sommeTotale : Int = 0
+    var sommeTotale : Float = 0.0
     
-    var sommeDue : Int = 0
+    var sommeDue : Float = 0.0
     
-    var sommeRetire : Int = 0
+    var sommeRetire : Float = 0.0
 
     init(idVendeur: Int, prenom: String, nom: String, email: String, numero: String) {
         self.idVendeur = idVendeur
@@ -33,7 +33,7 @@ struct Vendeur {
         self.numero = numero
     }
     
-    init(idVendeur: Int, prenom: String, nom: String, email: String, numero: String, sommeTotale: Int, sommeDue: Int, sommeRetire: Int) {
+    init(idVendeur: Int, prenom: String, nom: String, email: String, numero: String, sommeTotale: Float, sommeDue: Float, sommeRetire: Float) {
         self.idVendeur = idVendeur
         self.prenom = prenom
         self.nom = nom
@@ -64,27 +64,27 @@ struct Vendeur {
         return self.numero
     }
 
-    func getSommeTotale() -> Int {
+    func getSommeTotale() -> Float {
         return self.sommeTotale
     }
 
-    func getSommeDue() -> Int {
+    func getSommeDue() -> Float {
         return self.sommeDue
     }
 
-    func getSommeRetire() -> Int {
+    func getSommeRetire() -> Float {
         return self.sommeRetire
     }
 
-    mutating func setSommeTotale(sommeTotale: Int) {
+    mutating func setSommeTotale(sommeTotale: Float) {
         self.sommeTotale = sommeTotale
     }
 
-    mutating func setSommeDue(sommeDue: Int) {
+    mutating func setSommeDue(sommeDue: Float) {
         self.sommeDue = sommeDue
     }
 
-    mutating func setSommeRetire(sommeRetire: Int) {
+    mutating func setSommeRetire(sommeRetire: Float) {
         self.sommeRetire = sommeRetire
     }
 

@@ -40,10 +40,8 @@ class VendeurViewModel : ObservableObject {
         
         do {
             let vendeurs = try await vendeurService.getListVendeur(prenom: prenom, nom: nom, email: emailToSend, numero: numero)
-            print("vendeurs : ",vendeurs)
             DispatchQueue.main.async {
                 self.vendeur = vendeurs
-                print("vendeur : ", self.vendeur)
                 self.error = nil
             }
             
