@@ -39,7 +39,21 @@ struct NavigationSelectionView: View {
                         }
                         ButtonNavigation(text: "Catalogue", view: CatalogueView())
                         ButtonNavigation(text: "Session", view: SessionView())
-                        Spacer()
+                        if(userViewModel.user != nil) {
+                            HStack {
+                                Button(action: {
+                                    routeur.setRoute(route: AnyView(ConnexionView()))
+                                    userViewModel.user = nil
+                                }) {
+                                    Text("Déconnexion")
+                                        .font(.system(size: 20))
+                                        .padding()
+                                        .foregroundColor(.red)
+                                }
+                                Spacer()
+                            }.border(Color.black, width: 2)
+                            .background(DefineColor.color5.color)
+                        }
                     }
                 }
                 Spacer()
