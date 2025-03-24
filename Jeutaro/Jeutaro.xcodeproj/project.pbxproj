@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34977BB02D92208D004CFDBF /* CatalogueRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34977BAF2D92208D004CFDBF /* CatalogueRequestDto.swift */; };
+		34977BB22D9220CB004CFDBF /* CatalogueResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34977BB12D9220CB004CFDBF /* CatalogueResponseDto.swift */; };
+		34977BB42D9220FB004CFDBF /* CatalogueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34977BB32D9220FB004CFDBF /* CatalogueItem.swift */; };
+		34977BB62D922128004CFDBF /* CatalogueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34977BB52D922128004CFDBF /* CatalogueService.swift */; };
+		34977BB82D9221D1004CFDBF /* CatalogueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34977BB72D9221D1004CFDBF /* CatalogueViewModel.swift */; };
+		34977BBA2D922208004CFDBF /* CatalogueError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34977BB92D922208004CFDBF /* CatalogueError.swift */; };
+		34977BBD2D922268004CFDBF /* CatalogueDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34977BBC2D922268004CFDBF /* CatalogueDetailView.swift */; };
 		B71FF1282D818FED000425C3 /* JeutaroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1272D818FED000425C3 /* JeutaroApp.swift */; };
 		B71FF12A2D818FED000425C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1292D818FED000425C3 /* ContentView.swift */; };
 		B71FF12C2D818FEF000425C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B71FF12B2D818FEF000425C3 /* Assets.xcassets */; };
@@ -17,8 +24,6 @@
 		B71FF1552D81A37D000425C3 /* NavigationSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1542D81A37D000425C3 /* NavigationSelectionView.swift */; };
 		B71FF1572D81A57F000425C3 /* ConnexionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1562D81A57F000425C3 /* ConnexionView.swift */; };
 		B71FF1592D81A5A7000425C3 /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1582D81A5A7000425C3 /* CatalogueView.swift */; };
-		B71FF15A2D81A5A7000425C3 /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1582D81A5A7000425C3 /* CatalogueView.swift */; };
-		B71FF15B2D81A5A7000425C3 /* CatalogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF1582D81A5A7000425C3 /* CatalogueView.swift */; };
 		B71FF15D2D81A5BC000425C3 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF15C2D81A5BC000425C3 /* SessionView.swift */; };
 		B71FF15E2D81A5BC000425C3 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF15C2D81A5BC000425C3 /* SessionView.swift */; };
 		B71FF15F2D81A5BC000425C3 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FF15C2D81A5BC000425C3 /* SessionView.swift */; };
@@ -120,6 +125,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34977BAF2D92208D004CFDBF /* CatalogueRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueRequestDto.swift; sourceTree = "<group>"; };
+		34977BB12D9220CB004CFDBF /* CatalogueResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueResponseDto.swift; sourceTree = "<group>"; };
+		34977BB32D9220FB004CFDBF /* CatalogueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueItem.swift; sourceTree = "<group>"; };
+		34977BB52D922128004CFDBF /* CatalogueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueService.swift; sourceTree = "<group>"; };
+		34977BB72D9221D1004CFDBF /* CatalogueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueViewModel.swift; sourceTree = "<group>"; };
+		34977BB92D922208004CFDBF /* CatalogueError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueError.swift; sourceTree = "<group>"; };
+		34977BBC2D922268004CFDBF /* CatalogueDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueDetailView.swift; sourceTree = "<group>"; };
 		B71FF1242D818FED000425C3 /* Jeutaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jeutaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71FF1272D818FED000425C3 /* JeutaroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeutaroApp.swift; sourceTree = "<group>"; };
 		B71FF1292D818FED000425C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -224,6 +236,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34977BAD2D92202F004CFDBF /* Catalogue */ = {
+			isa = PBXGroup;
+			children = (
+				34977BAE2D92203E004CFDBF /* dto */,
+				34977BB52D922128004CFDBF /* CatalogueService.swift */,
+				34977BB92D922208004CFDBF /* CatalogueError.swift */,
+			);
+			path = Catalogue;
+			sourceTree = "<group>";
+		};
+		34977BAE2D92203E004CFDBF /* dto */ = {
+			isa = PBXGroup;
+			children = (
+				34977BAF2D92208D004CFDBF /* CatalogueRequestDto.swift */,
+				34977BB12D9220CB004CFDBF /* CatalogueResponseDto.swift */,
+			);
+			path = dto;
+			sourceTree = "<group>";
+		};
+		34977BBB2D922240004CFDBF /* Catalogue */ = {
+			isa = PBXGroup;
+			children = (
+				B71FF1582D81A5A7000425C3 /* CatalogueView.swift */,
+				34977BBC2D922268004CFDBF /* CatalogueDetailView.swift */,
+			);
+			path = Catalogue;
+			sourceTree = "<group>";
+		};
 		B71FF11B2D818FED000425C3 = {
 			isa = PBXGroup;
 			children = (
@@ -289,13 +329,13 @@
 		B71FF1512D81A311000425C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				34977BBB2D922240004CFDBF /* Catalogue */,
 				B76D964A2D91AA1D0092CAE7 /* GererUser */,
 				B76D96212D90BE4B0092CAE7 /* GererGestionnaire */,
 				B71FF1AB2D8F0EF1000425C3 /* GererJeu */,
 				B71FF18B2D8C307A000425C3 /* GererVendeur */,
 				B71FF1642D82DBFD000425C3 /* Navigation */,
 				B71FF1562D81A57F000425C3 /* ConnexionView.swift */,
-				B71FF1582D81A5A7000425C3 /* CatalogueView.swift */,
 				B71FF15C2D81A5BC000425C3 /* SessionView.swift */,
 				B71FF1822D8AC2A8000425C3 /* ConnexionSucessView.swift */,
 			);
@@ -311,6 +351,7 @@
 				B76D960A2D8F633C0092CAE7 /* JeuUnitaireViewModel.swift */,
 				B76D96182D9068880092CAE7 /* RetraitViewModel.swift */,
 				B76D962C2D9143970092CAE7 /* GestionnaireViewModel.swift */,
+				34977BB72D9221D1004CFDBF /* CatalogueViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -323,6 +364,7 @@
 				B71FF1992D8C6696000425C3 /* Vendeur.swift */,
 				B71FF1C12D8F1EC5000425C3 /* JeuUnitaire.swift */,
 				B71FF1C32D8F1ECE000425C3 /* Jeux.swift */,
+				34977BB32D9220FB004CFDBF /* CatalogueItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,6 +391,7 @@
 		B71FF1702D882C43000425C3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				34977BAD2D92202F004CFDBF /* Catalogue */,
 				B76D96442D91A88A0092CAE7 /* Utilisateur */,
 				B76D96342D9146130092CAE7 /* Admin */,
 				B71FF1B42D8F1793000425C3 /* Jeux */,
@@ -681,6 +724,7 @@
 				B71FF16A2D82E2CB000425C3 /* NavigationView.swift in Sources */,
 				B76D96162D9065030092CAE7 /* EnregistrerRetraitView.swift in Sources */,
 				B71FF1C22D8F1EC5000425C3 /* JeuUnitaire.swift in Sources */,
+				34977BBA2D922208004CFDBF /* CatalogueError.swift in Sources */,
 				B76D96542D9202D50092CAE7 /* UpdatePasswordDto.swift in Sources */,
 				B71FF16F2D8431FA000425C3 /* ButtonNavigation.swift in Sources */,
 				B71FF1A02D8DB5EF000425C3 /* CookieManager.swift in Sources */,
@@ -698,16 +742,19 @@
 				B71FF1722D882D85000425C3 /* AuthService.swift in Sources */,
 				B71FF1552D81A37D000425C3 /* NavigationSelectionView.swift in Sources */,
 				B76D96082D8F615E0092CAE7 /* EnregistrerAchatView.swift in Sources */,
+				34977BB82D9221D1004CFDBF /* CatalogueViewModel.swift in Sources */,
 				B76D963D2D91471E0092CAE7 /* DeleteGestionnaireDto.swift in Sources */,
 				B76D96482D91A8B30092CAE7 /* UtilisateurError.swift in Sources */,
 				B71FF1C02D8F1BAC000425C3 /* JeuxViewModel.swift in Sources */,
 				B76D960B2D8F633C0092CAE7 /* JeuUnitaireViewModel.swift in Sources */,
+				34977BBD2D922268004CFDBF /* CatalogueDetailView.swift in Sources */,
 				B76D962D2D9143970092CAE7 /* GestionnaireViewModel.swift in Sources */,
 				B71FF1A82D8E1BC2000425C3 /* CreateVendeurDto.swift in Sources */,
 				B76D96232D90BE6D0092CAE7 /* PageGestionGestionnaireView.swift in Sources */,
 				B71FF1AA2D8E1C26000425C3 /* UpdateVendeurDto.swift in Sources */,
 				B76D964E2D91AA460092CAE7 /* ModifMotDePasseView.swift in Sources */,
 				B71FF1C62D8F2961000425C3 /* InfoJeuDBDto.swift in Sources */,
+				34977BB42D9220FB004CFDBF /* CatalogueItem.swift in Sources */,
 				B71FF1B12D8F0F80000425C3 /* Etat.swift in Sources */,
 				B71FF1BC2D8F182D000425C3 /* CreateJeuUnitaireDto.swift in Sources */,
 				B76D96432D9152640092CAE7 /* UniqueGestionnaireView.swift in Sources */,
@@ -716,11 +763,14 @@
 				B71FF1832D8AC2A8000425C3 /* ConnexionSucessView.swift in Sources */,
 				B71FF19C2D8C72AA000425C3 /* UniqueVendeurSelectionView.swift in Sources */,
 				B76D96412D9149C70092CAE7 /* GetGestionnaireDto.swift in Sources */,
+				34977BB02D92208D004CFDBF /* CatalogueRequestDto.swift in Sources */,
 				B71FF1752D8839CE000425C3 /* User.swift in Sources */,
 				B71FF1932D8C3505000425C3 /* VendeurViewModel.swift in Sources */,
+				34977BB22D9220CB004CFDBF /* CatalogueResponseDto.swift in Sources */,
 				B71FF1972D8C6667000425C3 /* VendeurService.swift in Sources */,
 				B71FF1AD2D8F0F0F000425C3 /* EnregistrerDepotVIew.swift in Sources */,
 				B76D961C2D90B2790092CAE7 /* EnregistrerRetraitJeuArgentDto.swift in Sources */,
+				34977BB62D922128004CFDBF /* CatalogueService.swift in Sources */,
 				B71FF17E2D8878B4000425C3 /* UserLogin.swift in Sources */,
 				B71FF1282D818FED000425C3 /* JeutaroApp.swift in Sources */,
 				B71FF1572D81A57F000425C3 /* ConnexionView.swift in Sources */,
@@ -736,7 +786,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B71FF15A2D81A5A7000425C3 /* CatalogueView.swift in Sources */,
 				B71FF1622D81A90A000425C3 /* Routeur.swift in Sources */,
 				B71FF1662D82DC30000425C3 /* NavigationSelectionView.swift in Sources */,
 				B71FF15E2D81A5BC000425C3 /* SessionView.swift in Sources */,
@@ -760,7 +809,6 @@
 				B71FF1632D81A90A000425C3 /* Routeur.swift in Sources */,
 				B71FF1AE2D8F0F0F000425C3 /* EnregistrerDepotVIew.swift in Sources */,
 				B76D962B2D90BF040092CAE7 /* DeleteGestionnaireView.swift in Sources */,
-				B71FF15B2D81A5A7000425C3 /* CatalogueView.swift in Sources */,
 				B71FF1B22D8F0F80000425C3 /* Etat.swift in Sources */,
 				B71FF1652D82DC30000425C3 /* NavigationSelectionView.swift in Sources */,
 				B71FF1842D8AC2A8000425C3 /* ConnexionSucessView.swift in Sources */,
