@@ -79,10 +79,10 @@ struct AdminService {
             return resultDto
         }
         else if httpResponse.statusCode == 401 {
-            throw VendeurError.Unauthorized
+            throw AdminError.Unauthorized
         }
         else if httpResponse.statusCode == 500  {
-            throw VendeurError.ServerError
+            throw AdminError.ServerError
         }
         return []
     }

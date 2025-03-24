@@ -93,6 +93,13 @@
 		B76D963D2D91471E0092CAE7 /* DeleteGestionnaireDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D963C2D91471E0092CAE7 /* DeleteGestionnaireDto.swift */; };
 		B76D96412D9149C70092CAE7 /* GetGestionnaireDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D96402D9149C70092CAE7 /* GetGestionnaireDto.swift */; };
 		B76D96432D9152640092CAE7 /* UniqueGestionnaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D96422D9152640092CAE7 /* UniqueGestionnaireView.swift */; };
+		B76D96462D91A8A30092CAE7 /* UtilisateurService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D96452D91A8A30092CAE7 /* UtilisateurService.swift */; };
+		B76D96482D91A8B30092CAE7 /* UtilisateurError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D96472D91A8B30092CAE7 /* UtilisateurError.swift */; };
+		B76D964C2D91AA360092CAE7 /* PageMonCompteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D964B2D91AA360092CAE7 /* PageMonCompteView.swift */; };
+		B76D964E2D91AA460092CAE7 /* ModifMotDePasseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D964D2D91AA460092CAE7 /* ModifMotDePasseView.swift */; };
+		B76D96522D9202870092CAE7 /* UpdateUserDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D96512D9202870092CAE7 /* UpdateUserDto.swift */; };
+		B76D96542D9202D50092CAE7 /* UpdatePasswordDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D96532D9202D50092CAE7 /* UpdatePasswordDto.swift */; };
+		B76D96562D92047C0092CAE7 /* ModifInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D96552D92047C0092CAE7 /* ModifInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +190,13 @@
 		B76D963C2D91471E0092CAE7 /* DeleteGestionnaireDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGestionnaireDto.swift; sourceTree = "<group>"; };
 		B76D96402D9149C70092CAE7 /* GetGestionnaireDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGestionnaireDto.swift; sourceTree = "<group>"; };
 		B76D96422D9152640092CAE7 /* UniqueGestionnaireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueGestionnaireView.swift; sourceTree = "<group>"; };
+		B76D96452D91A8A30092CAE7 /* UtilisateurService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilisateurService.swift; sourceTree = "<group>"; };
+		B76D96472D91A8B30092CAE7 /* UtilisateurError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilisateurError.swift; sourceTree = "<group>"; };
+		B76D964B2D91AA360092CAE7 /* PageMonCompteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageMonCompteView.swift; sourceTree = "<group>"; };
+		B76D964D2D91AA460092CAE7 /* ModifMotDePasseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifMotDePasseView.swift; sourceTree = "<group>"; };
+		B76D96512D9202870092CAE7 /* UpdateUserDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserDto.swift; sourceTree = "<group>"; };
+		B76D96532D9202D50092CAE7 /* UpdatePasswordDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordDto.swift; sourceTree = "<group>"; };
+		B76D96552D92047C0092CAE7 /* ModifInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +289,7 @@
 		B71FF1512D81A311000425C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B76D964A2D91AA1D0092CAE7 /* GererUser */,
 				B76D96212D90BE4B0092CAE7 /* GererGestionnaire */,
 				B71FF1AB2D8F0EF1000425C3 /* GererJeu */,
 				B71FF18B2D8C307A000425C3 /* GererVendeur */,
@@ -334,6 +349,7 @@
 		B71FF1702D882C43000425C3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				B76D96442D91A88A0092CAE7 /* Utilisateur */,
 				B76D96342D9146130092CAE7 /* Admin */,
 				B71FF1B42D8F1793000425C3 /* Jeux */,
 				B71FF1B32D8F1770000425C3 /* JeuUnitaire */,
@@ -486,6 +502,35 @@
 			path = dto;
 			sourceTree = "<group>";
 		};
+		B76D96442D91A88A0092CAE7 /* Utilisateur */ = {
+			isa = PBXGroup;
+			children = (
+				B76D96492D91A8B90092CAE7 /* dto */,
+				B76D96452D91A8A30092CAE7 /* UtilisateurService.swift */,
+				B76D96472D91A8B30092CAE7 /* UtilisateurError.swift */,
+			);
+			path = Utilisateur;
+			sourceTree = "<group>";
+		};
+		B76D96492D91A8B90092CAE7 /* dto */ = {
+			isa = PBXGroup;
+			children = (
+				B76D96512D9202870092CAE7 /* UpdateUserDto.swift */,
+				B76D96532D9202D50092CAE7 /* UpdatePasswordDto.swift */,
+			);
+			path = dto;
+			sourceTree = "<group>";
+		};
+		B76D964A2D91AA1D0092CAE7 /* GererUser */ = {
+			isa = PBXGroup;
+			children = (
+				B76D964B2D91AA360092CAE7 /* PageMonCompteView.swift */,
+				B76D964D2D91AA460092CAE7 /* ModifMotDePasseView.swift */,
+				B76D96552D92047C0092CAE7 /* ModifInfoView.swift */,
+			);
+			path = GererUser;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -620,7 +665,9 @@
 				B71FF1A22D8DFB87000425C3 /* VendeurError.swift in Sources */,
 				B76D960D2D8F64ED0092CAE7 /* InfoJeuUnitaireDisponibleDto.swift in Sources */,
 				B71FF18D2D8C3364000425C3 /* SelectionVendeurView.swift in Sources */,
+				B76D96562D92047C0092CAE7 /* ModifInfoView.swift in Sources */,
 				B76D962A2D90BF040092CAE7 /* DeleteGestionnaireView.swift in Sources */,
+				B76D96522D9202870092CAE7 /* UpdateUserDto.swift in Sources */,
 				B71FF1A62D8E0B9A000425C3 /* GetVendeurDto.swift in Sources */,
 				B76D96272D90BEE50092CAE7 /* CreationGestionnaireView.swift in Sources */,
 				B71FF1812D8881BA000425C3 /* UserViewModel.swift in Sources */,
@@ -634,6 +681,7 @@
 				B71FF16A2D82E2CB000425C3 /* NavigationView.swift in Sources */,
 				B76D96162D9065030092CAE7 /* EnregistrerRetraitView.swift in Sources */,
 				B71FF1C22D8F1EC5000425C3 /* JeuUnitaire.swift in Sources */,
+				B76D96542D9202D50092CAE7 /* UpdatePasswordDto.swift in Sources */,
 				B71FF16F2D8431FA000425C3 /* ButtonNavigation.swift in Sources */,
 				B71FF1A02D8DB5EF000425C3 /* CookieManager.swift in Sources */,
 				B76D96382D9146280092CAE7 /* AdminError.swift in Sources */,
@@ -641,20 +689,24 @@
 				B71FF1C42D8F1ECF000425C3 /* Jeux.swift in Sources */,
 				B71FF1A42D8E0026000425C3 /* SearchVendeurDto.swift in Sources */,
 				B71FF15D2D81A5BC000425C3 /* SessionView.swift in Sources */,
+				B76D96462D91A8A30092CAE7 /* UtilisateurService.swift in Sources */,
 				B76D96362D91461F0092CAE7 /* AdminService.swift in Sources */,
 				B71FF19A2D8C6696000425C3 /* Vendeur.swift in Sources */,
+				B76D964C2D91AA360092CAE7 /* PageMonCompteView.swift in Sources */,
 				B71FF1902D8C337B000425C3 /* ModificationVendeurView.swift in Sources */,
 				B71FF17C2D8875E7000425C3 /* AuthError.swift in Sources */,
 				B71FF1722D882D85000425C3 /* AuthService.swift in Sources */,
 				B71FF1552D81A37D000425C3 /* NavigationSelectionView.swift in Sources */,
 				B76D96082D8F615E0092CAE7 /* EnregistrerAchatView.swift in Sources */,
 				B76D963D2D91471E0092CAE7 /* DeleteGestionnaireDto.swift in Sources */,
+				B76D96482D91A8B30092CAE7 /* UtilisateurError.swift in Sources */,
 				B71FF1C02D8F1BAC000425C3 /* JeuxViewModel.swift in Sources */,
 				B76D960B2D8F633C0092CAE7 /* JeuUnitaireViewModel.swift in Sources */,
 				B76D962D2D9143970092CAE7 /* GestionnaireViewModel.swift in Sources */,
 				B71FF1A82D8E1BC2000425C3 /* CreateVendeurDto.swift in Sources */,
 				B76D96232D90BE6D0092CAE7 /* PageGestionGestionnaireView.swift in Sources */,
 				B71FF1AA2D8E1C26000425C3 /* UpdateVendeurDto.swift in Sources */,
+				B76D964E2D91AA460092CAE7 /* ModifMotDePasseView.swift in Sources */,
 				B71FF1C62D8F2961000425C3 /* InfoJeuDBDto.swift in Sources */,
 				B71FF1B12D8F0F80000425C3 /* Etat.swift in Sources */,
 				B71FF1BC2D8F182D000425C3 /* CreateJeuUnitaireDto.swift in Sources */,

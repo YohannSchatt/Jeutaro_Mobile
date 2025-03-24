@@ -25,12 +25,13 @@ struct NavigationSelectionView: View {
                     }
 
                     VStack(spacing: 0) {
-                        if userViewModel.user == nil {
+                        if userViewModel.getUser() == nil {
                             ButtonNavigation(text: "Connexion", view: ConnexionView())
                         } else {
-                            if userViewModel.user!.getRole() == .ADMIN {
+                            if userViewModel.getUser()!.getRole() == .ADMIN {
                                 ButtonNavigation(text: "Gérer gestionnaire", view: PageGestionGestionnaireView())
                             }
+                            ButtonNavigation(text: "Mon compte", view: PageMonCompteView())
                             ButtonNavigation(text: "Gérer vendeur", view: PageVendeurView())
                             ButtonNavigation(text: "Enregistrer un dépot", view: EnregistrerDepotView())
                             ButtonNavigation(text: "Enregistrer un achat", view: EnregistrerAchatView())
@@ -39,11 +40,11 @@ struct NavigationSelectionView: View {
                         ButtonNavigation(text: "Catalogue", view: CatalogueView())
                         ButtonNavigation(text: "Session", view: SessionView())
 
-                        if userViewModel.user != nil {
+                        if userViewModel.getUser() != nil {
                             HStack {
                                 Button(action: {
                                     routeur.setRoute(route: AnyView(ConnexionView()))
-                                    userViewModel.user = nil
+                                    userViewModel.setUser(user : nil)
                                 }) {
                                     Text("Déconnexion")
                                         .font(.system(size: 20))
