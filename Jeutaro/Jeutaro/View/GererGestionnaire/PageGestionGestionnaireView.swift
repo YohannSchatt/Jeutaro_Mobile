@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct PageGestionGestionnaireView: View {
+    
+    let gestionnaireViewModel : GestionnaireViewModel = GestionnaireViewModel()
+    
     var body: some View {
         VStack {
             Spacer()
-            CreationGestionnaireView()
-            Spacer()
-            DeleteGestionnaire()
+            CreationGestionnaireView(gestionnaireViewModel: gestionnaireViewModel)
+            Divider()
+                .frame(width: 350)
+                .background(Color.gray)
+            DeleteGestionnaireView(gestionnaireViewModel: gestionnaireViewModel)
             Spacer()
         }
+        .padding()
     }
 }
 

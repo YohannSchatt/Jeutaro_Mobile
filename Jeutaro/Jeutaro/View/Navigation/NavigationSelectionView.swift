@@ -17,19 +17,18 @@ struct NavigationSelectionView: View {
         NavigationStack {
             HStack {
                 VStack {
-                    Spacer().frame(maxHeight: 17)
                     HStack {
                         Spacer().frame(maxWidth: 10)
-                        Text("Navigation").font(.system(size: 30))
+                        Text("Navigation")
+                            .font(.system(size: 30))
                         Spacer()
                     }
-                    VStack(spacing:0) {
-                        Spacer().frame(maxHeight: 40)
-                        if(userViewModel.user == nil) {
+
+                    VStack(spacing: 0) {
+                        if userViewModel.user == nil {
                             ButtonNavigation(text: "Connexion", view: ConnexionView())
-                        }
-                        else {
-                            if (userViewModel.user!.getRole() == .ADMIN) {
+                        } else {
+                            if userViewModel.user!.getRole() == .ADMIN {
                                 ButtonNavigation(text: "Gérer gestionnaire", view: PageGestionGestionnaireView())
                             }
                             ButtonNavigation(text: "Gérer vendeur", view: PageVendeurView())
@@ -39,7 +38,8 @@ struct NavigationSelectionView: View {
                         }
                         ButtonNavigation(text: "Catalogue", view: CatalogueView())
                         ButtonNavigation(text: "Session", view: SessionView())
-                        if(userViewModel.user != nil) {
+
+                        if userViewModel.user != nil {
                             HStack {
                                 Button(action: {
                                     routeur.setRoute(route: AnyView(ConnexionView()))
@@ -51,15 +51,21 @@ struct NavigationSelectionView: View {
                                         .foregroundColor(.red)
                                 }
                                 Spacer()
-                            }.border(Color.black, width: 2)
+                            }
+                            .border(Color.black, width: 2)
                             .background(DefineColor.color5.color)
                         }
                     }
+                    .padding(.top, 10)
+                    .frame(maxHeight: .infinity, alignment: .top)
                 }
                 Spacer()
-            }.background(DefineColor.color2.color)
+            }
+            .background(DefineColor.color2.color)
+            .frame(maxHeight: .infinity)
         }
     }
+
 }
 
 struct NavigationSelectionView_Previews: PreviewProvider {
