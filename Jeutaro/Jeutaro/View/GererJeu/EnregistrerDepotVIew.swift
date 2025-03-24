@@ -21,133 +21,236 @@ struct EnregistrerDepotView: View {
     @State private var selectedEmailIndex: Int? = nil
     @State private var selectedNomIndex: Int? = nil
     
-    @State private var message : String = ""
+    @State private var message: String = ""
     
     let jeuxViewModel: JeuxViewModel = JeuxViewModel()
     
     var body: some View {
-        VStack {
-            Spacer()
-            VStack {
-                Text("Enregister un dépot").font(.system(size:20))
-                Spacer().frame(maxHeight: 20)
-                
-                VStack {
-                    Text("Email du vendeur")
-                        .frame(maxWidth: .infinity, alignment: .leading)
+        ZStack {
+            // Fond avec dégradé
+            LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.1), Color.white]),
+                           startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+            
+            ScrollView {
+                VStack(spacing: 20) {
+                    // En-tête
+                    Text("Enregistrer un dépôt")
+                        .font(.system(size: 28, weight: .bold))
+                        .foregroundColor(.primary)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(.top, 20)
+                        .padding(.bottom, 10)
                     
-                    TextField("email du vendeur...", text: $email)
-                        .frame(height:50)
-                        .autocapitalization(.none)
-                        .disableAutocorrection(true)
-                        .background(Color(.secondarySystemBackground))
-                        .cornerRadius(10)
-                        .onChange(of: email) { newValue in
-                            updateEmailSuggestions(with: newValue)
-                        }
-                    
-                    if !emailSuggestions.isEmpty {
-                        List(emailSuggestions, id: \.self) { suggestion in
-                            Text(suggestion)
-                                .onTapGesture {
-                                    email = suggestion
-                                    selectedEmailIndex = emailSuggestions.firstIndex(of: suggestion)
-                                    emailSuggestions = []
+                    // Contenu principal
+                    VStack(spacing: 25) {
+                        // Section Email du vendeur
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Email du vendeur")
+                                .font(.headline)
+                                .foregroundColor(.secondary)
+                            
+                            TextField("Email du vendeur...", text: $email)
+                                .autocapitalization(.none)
+                                .disableAutocorrection(true)
+                                .padding()
+                                .background(Color(.systemGray6))
+                                .cornerRadius(10)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.blue.opacity(0.3), lineWidth: 1)
+                                )
+                                .onChange(of: email) { newValue in
+                                    updateEmailSuggestions(with: newValue)
                                 }
-                        }
-                        .frame(height: 100)
-                    }
-                }.padding()
-                
-                VStack {
-                    Text("Nom du jeu")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    TextField("Nom du jeu...", text: $nom)
-                        .frame(height:50)
-                        .autocapitalization(.none)
-                        .disableAutocorrection(true)
-                        .background(Color(.secondarySystemBackground))
-                        .cornerRadius(10)
-                        .onChange(of: nom) { newValue in
-                            updateNomSuggestions(with: newValue)
-                        }
-                    
-                    if !nomSuggestions.isEmpty {
-                        List(nomSuggestions, id: \.self) { suggestion in
-                            Text(suggestion)
-                                .onTapGesture {
-                                    nom = suggestion
-                                    selectedNomIndex = nomSuggestions.firstIndex(of: suggestion)
-                                    nomSuggestions = []
+                            
+                            if !emailSuggestions.isEmpty {
+                                ScrollView {
+                                    VStack(spacing: 0) {
+                                        ForEach(emailSuggestions, id: \.self) { suggestion in
+                                            HStack {
+                                                Text(suggestion)
+                                                    .padding(.vertical, 10)
+                                                    .padding(.horizontal, 15)
+                                                Spacer()
+                                            }
+                                            .contentShape(Rectangle())
+                                            .background(Color.white)
+                                            .onTapGesture {
+                                                email = suggestion
+                                                selectedEmailIndex = emailSuggestions.firstIndex(of: suggestion)
+                                                emailSuggestions = []
+                                            }
+                                            Divider()
+                                        }
+                                    }
+                                    .background(Color(.systemGray6).opacity(0.5))
+                                    .cornerRadius(10)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.blue.opacity(0.2), lineWidth: 1)
+                                    )
                                 }
-                        }
-                        .frame(height: 100)
-                    }
-                }.padding()
-                
-                HStack {
-                    Spacer().frame(maxWidth: 20)
-                    Text("Etat")
-                    Picker("Etat", selection: $selectedEtat) {
-                        ForEach(Etat.allCases) { etat in
-                            Text(etat.rawValue).tag(etat)
-                        }
-                    }
-                    Spacer()
-                }
-                .pickerStyle(MenuPickerStyle())
-                
-                VStack {
-                    Text("Prix")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    TextField("prix", text: Binding(
-                        get: {
-                            String(prix)
-                        },
-                        set: { newValue in
-                            if let floatValue = Float(newValue) {
-                                prix = floatValue
+                                .frame(maxHeight: 150)
                             }
                         }
-                    ))
-                    .frame(height: 50)
-                    .autocapitalization(.none)
-                    .disableAutocorrection(true)
-                    .background(Color(.secondarySystemBackground))
-                    .cornerRadius(10)
+                        .padding(.horizontal)
+                        
+                        // Section Nom du jeu
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Nom du jeu")
+                                .font(.headline)
+                                .foregroundColor(.secondary)
+                            
+                            TextField("Nom du jeu...", text: $nom)
+                                .autocapitalization(.none)
+                                .disableAutocorrection(true)
+                                .padding()
+                                .background(Color(.systemGray6))
+                                .cornerRadius(10)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.blue.opacity(0.3), lineWidth: 1)
+                                )
+                                .onChange(of: nom) { newValue in
+                                    updateNomSuggestions(with: newValue)
+                                }
+                            
+                            if !nomSuggestions.isEmpty {
+                                ScrollView {
+                                    VStack(spacing: 0) {
+                                        ForEach(nomSuggestions, id: \.self) { suggestion in
+                                            HStack {
+                                                Text(suggestion)
+                                                    .padding(.vertical, 10)
+                                                    .padding(.horizontal, 15)
+                                                Spacer()
+                                            }
+                                            .contentShape(Rectangle())
+                                            .background(Color.white)
+                                            .onTapGesture {
+                                                nom = suggestion
+                                                selectedNomIndex = nomSuggestions.firstIndex(of: suggestion)
+                                                nomSuggestions = []
+                                            }
+                                            Divider()
+                                        }
+                                    }
+                                    .background(Color(.systemGray6).opacity(0.5))
+                                    .cornerRadius(10)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.blue.opacity(0.2), lineWidth: 1)
+                                    )
+                                }
+                                .frame(maxHeight: 150)
+                            }
+                        }
+                        .padding(.horizontal)
+                        
+                        // Section État
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("État du jeu")
+                                .font(.headline)
+                                .foregroundColor(.secondary)
+                            
+                            Picker("État", selection: $selectedEtat) {
+                                ForEach(Etat.allCases) { etat in
+                                    Text(etat.rawValue).tag(etat)
+                                }
+                            }
+                            .pickerStyle(MenuPickerStyle())
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color(.systemGray6))
+                            .cornerRadius(10)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.blue.opacity(0.3), lineWidth: 1)
+                            )
+                        }
+                        .padding(.horizontal)
+                        
+                        // Section Prix
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Prix")
+                                .font(.headline)
+                                .foregroundColor(.secondary)
+                            
+                            TextField("Prix", text: Binding(
+                                get: { String(prix) },
+                                set: { newValue in
+                                    if let floatValue = Float(newValue) {
+                                        prix = floatValue
+                                    }
+                                }
+                            ))
+                            .keyboardType(.decimalPad)
+                            .padding()
+                            .background(Color(.systemGray6))
+                            .cornerRadius(10)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.blue.opacity(0.3), lineWidth: 1)
+                            )
+                        }
+                        .padding(.horizontal)
+                        
+                        // Bouton de création
+                        VStack(spacing: 10) {
+                            Button(action: {
+                                if (self.selectedNomIndex == nil || self.selectedEmailIndex == nil) {
+                                    self.message = "Veuillez sélectionner un vendeur et un jeu"
+                                } else {
+                                    Task {
+                                        let result: Bool = await jeuxViewModel.createJeuUnitaire(
+                                            idJeu: jeuxViewModel.jeuxDB[self.selectedNomIndex!].idJeu,
+                                            idVendeur: jeuxViewModel.vendeurDB[self.selectedEmailIndex!].idVendeur,
+                                            etat: self.selectedEtat,
+                                            prix: self.prix
+                                        )
+                                        if (result) {
+                                            self.message = "Ajout avec succès"
+                                        } else {
+                                            self.message = "Erreur dans l'ajout"
+                                        }
+                                    }
+                                }
+                            }) {
+                                Text("Enregistrer le dépôt")
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .frame(height: 55)
+                                    .frame(maxWidth: .infinity)
+                                    .background(
+                                        LinearGradient(gradient: Gradient(colors: [Color.blue, Color.blue.opacity(0.8)]),
+                                                     startPoint: .leading, endPoint: .trailing)
+                                    )
+                                    .cornerRadius(10)
+                                    .shadow(color: Color.blue.opacity(0.3), radius: 5, x: 0, y: 5)
+                            }
+                            .padding(.horizontal)
+                            .padding(.top, 10)
+                            
+                            if !message.isEmpty {
+                                Text(message)
+                                    .font(.subheadline)
+                                    .foregroundColor(message.contains("succès") ? .green : .red)
+                                    .padding(.top, 5)
+                                    .multilineTextAlignment(.center)
+                            }
+                        }
+                        .padding(.bottom, 30)
+                    }
+                    .background(
+                        RoundedRectangle(cornerRadius: 15)
+                            .fill(Color.white.opacity(0.5))
+                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
+                    )
+                    .padding(.horizontal)
                 }
-                .padding()
+                .padding(.bottom, 20)
             }
-            VStack {
-                Button(action: {
-                    if (self.selectedNomIndex == nil || self.selectedEmailIndex == nil) {
-                        self.message = "Veuillez sélectionner un vendeur et un jeu"
-                    } else {
-                        Task {
-                            let result : Bool = await jeuxViewModel.createJeuUnitaire(idJeu: jeuxViewModel.jeuxDB[self.selectedNomIndex!].idJeu,
-                                                                  idVendeur: jeuxViewModel.vendeurDB[self.selectedEmailIndex!].idVendeur,
-                                                                  etat: self.selectedEtat,
-                                                                  prix: self.prix)
-                            if (result) {
-                                self.message = "Ajout avec succès"
-                            }
-                            else {
-                                self.message = "Erreur dans l'ajout"
-                            }
-                        }
-                    }
-                }) {
-                    Text("Créer")
-                        .foregroundColor(.white)
-                        .frame(width: 200, height: 50)
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                }
-                Text(self.message)
-            }
-            Spacer()
         }
     }
     
