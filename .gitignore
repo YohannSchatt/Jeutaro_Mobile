@@ -65,3 +65,6 @@ fastlane/test_output
 # Environnement file
 .env
 *.xcconfig
+
+/project_awi_back-main/
+/project_awi_back-main
