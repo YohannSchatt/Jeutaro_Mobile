@@ -17,6 +17,7 @@ struct UtilisateurService {
         self.apiUrl = "https://backjeutaro-e8bf61eb52f5.herokuapp.com" + "/user"
     }
     
+    //modifie les informations personnelles de l'utilisateur
     func modifInfo(updateUserDto : UpdateUserDto) async throws -> Bool {
         let url = URL(string: "\(apiUrl)/UpdateInfoPerso")!
         var request = URLRequest(url: url)
@@ -42,6 +43,7 @@ struct UtilisateurService {
         return false
     }
     
+    //modifie le mot de passe de l'utilisateur
     func modifPassword(updatePasswordDto : UpdatePasswordDto) async throws -> Bool {
         let url = URL(string: "\(apiUrl)/UpdatePassword")!
         var request = URLRequest(url: url)

@@ -17,6 +17,7 @@ struct JeuUnitaireService {
         self.apiUrl = "https://backjeutaro-e8bf61eb52f5.herokuapp.com" + "/jeu"
     }
     
+    // créé un jeu unitaire
     public func createJeuUnitaire(createJeuUnitaireDto : CreateJeuUnitaireDto) async throws -> Bool {
         let url = URL(string: "\(apiUrl)/creerJeuUnitaire")!
         var request = URLRequest(url: url)
@@ -40,6 +41,7 @@ struct JeuUnitaireService {
         return false
     }
     
+    // donne les jeux unitaires disponible a la vente
     public func getJeuUnitaireDisponible() async throws -> [InfoJeuUnitaireDisponibleDto]  {
         let url = URL(string: "\(apiUrl)/listInfoAchatJeuUnitaireDisponible")!
         var request = URLRequest(url: url)
@@ -61,6 +63,7 @@ struct JeuUnitaireService {
         return []
     }
     
+    // enregistre l'achat d'un utilisateur
     public func enregistrerAchat(enregistrerAchatDto : EnregistrerAchatDto) async throws -> Bool {
         let url = URL(string: "\(apiUrl)/achat")!
         var request = URLRequest(url: url)
@@ -84,6 +87,7 @@ struct JeuUnitaireService {
         return false
     }
     
+    // donne les jeux unitaires par vendeur
     func jeuxDisponibleByVendeur(vendeurId : Int) async throws -> [InfoJeuUnitaireDisponibleDto]  {
         let url = URL(string: "\(apiUrl)/jeuxDisponibleByVendeur/" + String(vendeurId))!
         var request = URLRequest(url: url)

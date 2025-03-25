@@ -15,6 +15,7 @@ struct CatalogueService {
         self.apiUrl = "https://backjeutaro-e8bf61eb52f5.herokuapp.com" + "/jeu"
     }
     
+    // Fonction pour récupérer le catalogue de jeux
     func getCatalogue(
         page: Int, 
         nom: String? = nil, 
@@ -66,7 +67,7 @@ struct CatalogueService {
         do {
             let (data, response) = try await URLSession.shared.data(for: request)
             
-            print("✅ Réponse reçue: \(data.count) bytes")
+            print("Réponse reçue: \(data.count) bytes")
             
             // Afficher uniquement le début de la réponse pour éviter de surcharger la console
             if let responseStr = String(data: data, encoding: .utf8)?.prefix(200) {

@@ -25,6 +25,7 @@ class UserViewModel: ObservableObject {
         self.routeur = routeur
     }
 
+    // Fonction de connexion
     func login(email: String, password: String) async {
         self.message = ""
         do {
@@ -43,6 +44,7 @@ class UserViewModel: ObservableObject {
         }
     }
 
+    // Fonction qui met à jour l'utilisateur dans le model
     func updateUser() {
         guard var currentUser = self.user else { return }
         currentUser.setNom(nom: self.nom)
@@ -51,6 +53,7 @@ class UserViewModel: ObservableObject {
         self.user = currentUser
     }
     
+    // modifie le mot de passe de l'utilisateur
     func modifPassword(oldPassword : String, newPassword : String, confirmation : String) async -> Bool {
         
         var result : Bool = false
@@ -70,6 +73,7 @@ class UserViewModel: ObservableObject {
         return result
     }
     
+    //modifie les informations personnelles de l'utilisateur
     func modifInfo() async -> Bool {
         
         var result : Bool = false

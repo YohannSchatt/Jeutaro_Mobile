@@ -17,6 +17,7 @@ struct VendeurService {
         self.apiUrl = "https://backjeutaro-e8bf61eb52f5.herokuapp.com" + "/vendeur"
     }
     
+    //renvoie les informations des vendeurs 
     func getListVendeur(prenom : String?, nom : String?, email : String?, numero : String?) async throws -> [Vendeur] {
         let url = URL(string: "\(apiUrl)/getListVendeur")!
         var request = URLRequest(url: url)
@@ -53,6 +54,7 @@ struct VendeurService {
         return []
     }
     
+    //crée un nouveau vendeur
     func createVendeur(nom : String, prenom : String, email : String, numero : String) async throws -> Vendeur? {
         let url = URL(string: "\(apiUrl)/createVendeur")!
         var request = URLRequest(url: url)
@@ -86,6 +88,7 @@ struct VendeurService {
         return nil
     }
     
+    //met à jour un vendeur
     func updateVendeur(idVendeur : Int, nom : String?, prenom : String?, email : String?, numero : String?) async throws -> Vendeur? {
         let url = URL(string: "\(apiUrl)/updateVendeur")!
         var request = URLRequest(url: url)

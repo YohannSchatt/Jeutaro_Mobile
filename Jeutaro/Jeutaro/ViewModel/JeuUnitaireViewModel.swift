@@ -19,6 +19,7 @@ class JeuUnitaireViewModel : ObservableObject {
         }
     }
     
+    //enregistre un achat
     func enregistrerAchat(listIdJeu : [Int]) async -> Bool {
         var result : Bool = false
         do {
@@ -31,6 +32,7 @@ class JeuUnitaireViewModel : ObservableObject {
         return result
     }
     
+    //récupère la liste des jeux unitaires disponibles
     func getJeuxUnitaireDisponible() async {
         do {
             

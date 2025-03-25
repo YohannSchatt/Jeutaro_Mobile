@@ -25,12 +25,14 @@ class VendeurViewModel : ObservableObject {
         }
     }
     
+    //vérifie si l'email est valide
     private func isValidEmail(_ email: String) -> Bool {
         let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         let predicate = NSPredicate(format:"SELF MATCHES %@", regex)
         return predicate.evaluate(with: email)
     }
     
+    //recherche un vendeur avec les paramètres données
     func searchVendeur(prenom: String, nom: String, email: String, numero: String) async {
         let emailToSend = isValidEmail(email) ? email : nil
         
@@ -55,6 +57,7 @@ class VendeurViewModel : ObservableObject {
         }
     }
 
+    //permet de sélectionner l'id du vendeur que l'on veut
     func setIdVendeurSelected(index : Int) -> Void {
         DispatchQueue.main.async {
             self.message = ""
@@ -67,6 +70,7 @@ class VendeurViewModel : ObservableObject {
         }
     }
     
+    //permet de mettre à jour ou créer un vendeur
     func createOrUpdateVendeur(nom : String?, prenom : String?, email : String?, numero : String?) async {
         
         let selectedId : Int = self.idVendeurSelected

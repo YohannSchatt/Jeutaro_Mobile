@@ -7,6 +7,7 @@
 
 import Foundation
 
+//ViewModel pour la gestion des gestionnaires
 class GestionnaireViewModel : ObservableObject {
     
     @Published private var listGestionnaire : [User] = []
@@ -17,6 +18,7 @@ class GestionnaireViewModel : ObservableObject {
     
     init() {}
     
+    //récupère la liste des gestionnaires et l'ajoute
     func getGestionnaire() async {
         do {
             
@@ -36,6 +38,7 @@ class GestionnaireViewModel : ObservableObject {
         }
     } 
     
+    //crée un gestionnaire
     func createGestionnaire(nom : String, prenom : String, email : String) async -> Bool {
         
         var result : Bool = false
@@ -62,6 +65,7 @@ class GestionnaireViewModel : ObservableObject {
         return result
     }
     
+    //supprime un gestionnaire
     func deleteGestionnaire(email : String) async -> Bool {
         
         var result : Bool = false
@@ -102,6 +106,7 @@ class GestionnaireViewModel : ObservableObject {
         return result
     }
     
+    //filtre les gestionnaires
     func filterGestionnaire(nom: String, prenom: String, email: String) {
         self.listfilterGestionnaire = listGestionnaire.filter { user in
             (user.getNom().lowercased().contains(nom.lowercased()) || nom.isEmpty) &&

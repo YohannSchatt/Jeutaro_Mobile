@@ -20,6 +20,7 @@ class RetraitViewModel : ObservableObject {
     
     init() {}
     
+    //récupère la liste des jeux du vendeur
     func getJeuVendeur(vendeur : Vendeur) async {
         do {
             let result : [InfoJeuUnitaireDisponibleDto] = try await jeuUnitaireService.jeuxDisponibleByVendeur(vendeurId : vendeur.idVendeur)
@@ -41,6 +42,8 @@ class RetraitViewModel : ObservableObject {
         }
     }
     
+
+    //permet de retirer soit de l'argent, soit des jeux soit les deux pour un vendeur
     func retraitJeuArgent(vendeur : Vendeur, listJeu : [Int], getArgent : Bool) async -> Bool {
         
         var result : Bool = false

@@ -17,6 +17,7 @@ struct SessionService {
         self.apiUrl = "https://backjeutaro-e8bf61eb52f5.herokuapp.com" + "/session"
     }
     
+    //donne la session actuelle
     func getActualSession() async throws -> Session? {
         let url = URL(string: "\(apiUrl)/ActualSession")!
         var request = URLRequest(url: url)
@@ -54,6 +55,7 @@ struct SessionService {
         }
     }
     
+    //renvoie les sessions qui ne sont pas encore passées / commencées
     func getNextSessions() async throws -> [Session] {
         let url = URL(string: "\(apiUrl)/NextSession")!
         var request = URLRequest(url: url)
@@ -90,7 +92,7 @@ struct SessionService {
         }
     }
 
-        // Add these methods to your existing SessionService.swift
+    //crée une sessions
     func createSession(titre: String, lieu: String, dateDebut: String, dateFin: String, description: String, comission: String) async throws -> Session? {
         let url = URL(string: "\(apiUrl)/CreateSession")!
         var request = URLRequest(url: url)
@@ -135,6 +137,7 @@ struct SessionService {
         }
     }
     
+    //met à jour une session
     func updateSession(id: Int, titre: String, lieu: String, dateDebut: String, dateFin: String, description: String, comission: String) async throws -> Session? {
         let url = URL(string: "\(apiUrl)/UpdateSession")!
         var request = URLRequest(url: url)
@@ -216,6 +219,7 @@ struct SessionService {
         }
     }
     
+    //renvoie les sessions qui correspondent aux critères de recherche
     func getListSession(titre: String? = nil, lieu: String? = nil, dateDebut: String? = nil, dateFin: String? = nil) async throws -> [Session] {
         let url = URL(string: "\(apiUrl)/GetListSession")!
         var request = URLRequest(url: url)

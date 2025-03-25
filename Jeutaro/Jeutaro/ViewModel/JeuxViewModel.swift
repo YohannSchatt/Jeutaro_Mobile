@@ -32,6 +32,7 @@ class JeuxViewModel : ObservableObject {
         }
     }
     
+    //récupère la liste des jeux de la DB
     func getJeuxDB() async {
         
         do{
@@ -50,6 +51,7 @@ class JeuxViewModel : ObservableObject {
         }
     }
     
+    //récupère les vendeurs de la DB
     func getVendeurDB() async {
         DispatchQueue.main.async {
             self.indexVendeurSelected = -1
@@ -59,7 +61,6 @@ class JeuxViewModel : ObservableObject {
             let vendeurs = try await vendeurService.getListVendeur(prenom: nil, nom: nil, email: nil, numero: nil)
             DispatchQueue.main.async {
                 self.vendeurDB = vendeurs
-                print("vendeur : ", self.vendeurDB)
                 self.error = nil
             }
         } catch let err as VendeurError {

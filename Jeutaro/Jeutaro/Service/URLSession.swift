@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Extension pour URLSession qui permet de récupérer un objet décodé et le code de réponse HTTP
 extension URLSession {
     func getJson<T: Decodable>(from request: URLRequest) async throws -> (T, HTTPURLResponse, Data) {
         let (data, response) = try await data(for: request)

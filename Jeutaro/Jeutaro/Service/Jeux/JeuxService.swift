@@ -17,6 +17,7 @@ struct JeuxService {
         self.apiUrl = "https://backjeutaro-e8bf61eb52f5.herokuapp.com" + "/jeu"
     }
     
+    //obtient les jeux unitaires de la DB
     func getJeux() async throws -> [InfoJeuDBDto] {
         let url = URL(string: "\(apiUrl)/DBJeu")!
         var request = URLRequest(url: url)

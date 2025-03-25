@@ -17,6 +17,7 @@ struct AdminService {
         self.apiUrl = "https://backjeutaro-e8bf61eb52f5.herokuapp.com" + "/admin"
     }
     
+    // créé un gestionnaire
     func createGestionnaire(createGestionnaireDto : CreateGestionnaireDto) async throws -> Bool {
         let url = URL(string: "\(apiUrl)/createGestionnaire")!
         var request = URLRequest(url: url)
@@ -40,6 +41,7 @@ struct AdminService {
         return false
     }
     
+    // supprime un gestionnaire
     func deleteGestionnaire(deleteGestionnaireDto : DeleteGestionnaireDto) async throws -> Bool {
         let url = URL(string: "\(apiUrl)/deleteGestionnaire")!
         var request = URLRequest(url: url)
@@ -63,6 +65,7 @@ struct AdminService {
         return false
     }
     
+    // récupère la liste des gestionnaires
     func getGestionnaire() async throws -> [GetGestionnaireDto] {
         let url = URL(string: "\(apiUrl)/getGestionnaire")!
         var request = URLRequest(url: url)

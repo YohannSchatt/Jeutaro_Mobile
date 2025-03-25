@@ -19,6 +19,7 @@ struct AuthService {
         self.apiUrl = "https://backjeutaro-e8bf61eb52f5.herokuapp.com" + "/auth"
     }
 
+    // Fonction de login d'un utilisateur
     func login(email: String, password: String) async throws -> User {
         let url = URL(string: "\(apiUrl)/login")!
         var request = URLRequest(url: url)

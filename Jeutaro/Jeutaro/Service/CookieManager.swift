@@ -9,6 +9,7 @@ import Foundation
 
 import Foundation
 
+// Gestionnaire de cookies partagé
 class CookieManager {
     static let shared = CookieManager()
 
