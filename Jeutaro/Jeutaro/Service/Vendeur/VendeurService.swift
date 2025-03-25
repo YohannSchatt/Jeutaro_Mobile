@@ -14,10 +14,7 @@ struct VendeurService {
     let session = CookieManager.shared.session
     
     init() {
-        guard let apiUrl = ProcessInfo.processInfo.environment["API_URL"] else {
-            fatalError("API_URL not set in Config file")
-        }
-        self.apiUrl = apiUrl + "/vendeur"
+        self.apiUrl = "https://backjeutaro-e8bf61eb52f5.herokuapp.com" + "/vendeur"
     }
     
     func getListVendeur(prenom : String?, nom : String?, email : String?, numero : String?) async throws -> [Vendeur] {

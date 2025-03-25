@@ -14,10 +14,7 @@ struct UtilisateurService {
     let session = CookieManager.shared.session
     
     init() {
-        guard let apiUrl = ProcessInfo.processInfo.environment["API_URL"] else {
-            fatalError("API_URL not set in Config file")
-        }
-        self.apiUrl = apiUrl + "/user"
+        self.apiUrl = "https://backjeutaro-e8bf61eb52f5.herokuapp.com" + "/user"
     }
     
     func modifInfo(updateUserDto : UpdateUserDto) async throws -> Bool {

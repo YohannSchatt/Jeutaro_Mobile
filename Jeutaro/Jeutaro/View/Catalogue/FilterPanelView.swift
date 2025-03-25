@@ -15,7 +15,7 @@ struct FilterPanelView: View {
             // En-tête du panneau
             HStack {
                 Text("Filtres")
-                    .font(.headline)
+                    .font(.system(size: 22, weight: .bold))
                     .padding()
                 
                 Spacer()
@@ -34,97 +34,128 @@ struct FilterPanelView: View {
             Divider()
             
             ScrollView {
-                VStack(spacing: 16) {
+                VStack(spacing: 20) {
                     // Filtre par nom
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 8) {
                         Text("Nom du jeu")
-                            .font(.subheadline)
+                            .font(.headline)
                             .foregroundColor(.secondary)
                         
                         TextField("Nom...", text: $viewModel.filterName)
                             .padding()
                             .background(Color(.systemGray6))
-                            .cornerRadius(8)
+                            .cornerRadius(10)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.blue.opacity(0.3), lineWidth: 1)
+                            )
                     }
                     .padding(.horizontal)
                     
                     // Filtre par éditeur
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 8) {
                         Text("Éditeur")
-                            .font(.subheadline)
+                            .font(.headline)
                             .foregroundColor(.secondary)
                         
                         TextField("Éditeur...", text: $viewModel.filterPublisher)
                             .padding()
                             .background(Color(.systemGray6))
-                            .cornerRadius(8)
+                            .cornerRadius(10)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.blue.opacity(0.3), lineWidth: 1)
+                            )
                     }
                     .padding(.horizontal)
                     
                     // Filtre par prix
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 8) {
                         Text("Prix (€)")
-                            .font(.subheadline)
+                            .font(.headline)
                             .foregroundColor(.secondary)
                         
-                        HStack {
-                            TextField("Min", text: $viewModel.filterMinPrice)
-                                .keyboardType(.decimalPad)
-                                .padding()
-                                .background(Color(.systemGray6))
-                                .cornerRadius(8)
+                        HStack(spacing: 10) {
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("Min")
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                                
+                                TextField("Min", text: $viewModel.filterMinPrice)
+                                    .keyboardType(.decimalPad)
+                                    .padding()
+                                    .background(Color(.systemGray6))
+                                    .cornerRadius(10)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.blue.opacity(0.3), lineWidth: 1)
+                                    )
+                            }
                             
-                            Text("à")
-                                .foregroundColor(.secondary)
-                            
-                            TextField("Max", text: $viewModel.filterMaxPrice)
-                                .keyboardType(.decimalPad)
-                                .padding()
-                                .background(Color(.systemGray6))
-                                .cornerRadius(8)
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("Max")
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                                
+                                TextField("Max", text: $viewModel.filterMaxPrice)
+                                    .keyboardType(.decimalPad)
+                                    .padding()
+                                    .background(Color(.systemGray6))
+                                    .cornerRadius(10)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.blue.opacity(0.3), lineWidth: 1)
+                                    )
+                            }
                         }
                     }
                     .padding(.horizontal)
                     
-                    Spacer(minLength: 20)
+                    Spacer(minLength: 30)
                     
                     // Boutons d'action
-                    HStack {
+                    HStack(spacing: 15) {
                         // Bouton pour réinitialiser les filtres
                         Button(action: {
                             viewModel.resetFilters()
                             viewModel.showFilterPanel = false
                         }) {
                             Text("Réinitialiser")
+                                .font(.headline)
                                 .fontWeight(.medium)
                         }
                         .frame(maxWidth: .infinity)
                         .padding()
                         .background(Color.gray.opacity(0.2))
                         .foregroundColor(.primary)
-                        .cornerRadius(8)
+                        .cornerRadius(10)
                         
                         // Bouton pour appliquer les filtres
                         Button(action: {
                             viewModel.applyFilters()
                         }) {
                             Text("Appliquer")
+                                .font(.headline)
                                 .fontWeight(.medium)
                         }
                         .frame(maxWidth: .infinity)
                         .padding()
-                        .background(Color.blue)
+                        .background(
+                            LinearGradient(gradient: Gradient(colors: [Color.blue, Color.blue.opacity(0.8)]),
+                                          startPoint: .leading, endPoint: .trailing)
+                        )
                         .foregroundColor(.white)
-                        .cornerRadius(8)
+                        .cornerRadius(10)
+                        .shadow(color: Color.blue.opacity(0.3), radius: 3, x: 0, y: 3)
                     }
                     .padding(.horizontal)
                 }
-                .padding(.vertical)
+                .padding(.vertical, 10)
             }
         }
         .background(Color(.systemBackground))
-        .cornerRadius(12)
-        .shadow(radius: 10)
+        .cornerRadius(15)
+        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
         .padding(20)
     }
 }
