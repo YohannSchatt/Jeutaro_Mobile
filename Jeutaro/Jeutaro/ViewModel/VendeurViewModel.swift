@@ -107,4 +107,24 @@ class VendeurViewModel : ObservableObject {
             print(error)
         }
     }
+    
+    func getEmail(index : Int) -> String {
+        return self.vendeur[index].email
+    }
+    
+    func setEmail(index : Int, value : String) {
+        self.vendeur[index].email = value
+    }
+    
+    func getNom(index : Int) -> String {
+        return self.vendeur[index].nom
+    }
+    
+    func getPrenom(index : Int) -> String {
+        return self.vendeur[index].prenom
+    }
+    
+    func getVendeur(index : Int) -> Vendeur  {
+        return self.vendeur[index]
+    }
 }
