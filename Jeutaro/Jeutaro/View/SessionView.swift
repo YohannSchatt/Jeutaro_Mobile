@@ -10,27 +10,227 @@ import SwiftUI
 struct SessionView: View {
     @StateObject private var viewModel = SessionViewModel()
     @EnvironmentObject var routeur: Routeur
+    @EnvironmentObject var userViewModel: UserViewModel
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 16) {
-                // Current session section
-                currentSessionSection
+        ZStack {
+            // Contenu principal
+            ScrollView {
+                VStack(spacing: 16) {
+                    // Bouton Créer Session (visible uniquement pour les admins)
+                    if userViewModel.getUser()?.getRole() == .ADMIN {
+                        createSessionButton
+                    }
+                    
+                    // Current session section
+                    currentSessionSection
+                    
+                    Divider()
+                        .padding(.horizontal)
+                    
+                    // Upcoming sessions section
+                    upcomingSessionsSection
+                }
+                .padding(.vertical)
+            }
+            .navigationTitle("Sessions")
+            .onAppear {
+                viewModel.loadData()
+            }
+            .refreshable {
+                viewModel.loadData()
+            }
+            
+            // Panneau de création de session
+            if viewModel.showCreatePanel {
+                createSessionPanel
+            }
+        }
+    }
+    
+    // MARK: - Create Session Button & Panel
+    
+    private var createSessionButton: some View {
+        Button(action: {
+            viewModel.showCreatePanel = true
+        }) {
+            HStack {
+                Image(systemName: "plus.circle.fill")
+                    .font(.system(size: 16))
+                Text("Créer une session")
+                    .fontWeight(.medium)
+            }
+            .padding(.vertical, 10)
+            .padding(.horizontal, 16)
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(8)
+        }
+        .padding(.horizontal)
+        .padding(.top, 8)
+    }
+    
+    private var createSessionPanel: some View {
+        ZStack {
+            // Overlay semi-transparent
+            Color.black.opacity(0.4)
+                .edgesIgnoringSafeArea(.all)
+                .onTapGesture {
+                    // Fermer le panneau si on tape en dehors
+                    if !viewModel.isCreating {
+                        viewModel.showCreatePanel = false
+                    }
+                }
+            
+            // Panneau de création
+            VStack(spacing: 0) {
+                // Barre de titre
+                HStack {
+                    Text("Créer une nouvelle session")
+                        .font(.headline)
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        viewModel.showCreatePanel = false
+                    }) {
+                        Image(systemName: "xmark.circle.fill")
+                            .font(.title3)
+                            .foregroundColor(.gray)
+                    }
+                    .disabled(viewModel.isCreating)
+                }
+                .padding()
+                .background(Color(.systemBackground))
                 
                 Divider()
-                    .padding(.horizontal)
                 
-                // Upcoming sessions section
-                upcomingSessionsSection
+                // Formulaire
+                ScrollView {
+                    VStack(spacing: 16) {
+                        // Titre
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Titre")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                            
+                            TextField("Titre de la session", text: $viewModel.titre)
+                                .padding()
+                                .background(Color(.systemGray6))
+                                .cornerRadius(8)
+                        }
+                        
+                        // Lieu
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Lieu")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                            
+                            TextField("Lieu de la session", text: $viewModel.lieu)
+                                .padding()
+                                .background(Color(.systemGray6))
+                                .cornerRadius(8)
+                        }
+                        
+                        // Dates
+                        HStack {
+                            // Date de début
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("Date de début")
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                                
+                                DatePicker("", selection: $viewModel.dateDebut, displayedComponents: [.date])
+                                    .labelsHidden()
+                                    .padding()
+                                    .background(Color(.systemGray6))
+                                    .cornerRadius(8)
+                            }
+                            
+                            // Date de fin
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("Date de fin")
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                                
+                                DatePicker("", selection: $viewModel.dateFin, displayedComponents: [.date])
+                                    .labelsHidden()
+                                    .padding()
+                                    .background(Color(.systemGray6))
+                                    .cornerRadius(8)
+                            }
+                        }
+                        
+                        // Description
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Description")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                            
+                            TextEditor(text: $viewModel.description)
+                                .padding(4)
+                                .frame(height: 100)
+                                .background(Color(.systemGray6))
+                                .cornerRadius(8)
+                        }
+                        
+                        // Commission
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Commission (%)")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                            
+                            TextField("Commission", text: $viewModel.comission)
+                                .keyboardType(.decimalPad)
+                                .padding()
+                                .background(Color(.systemGray6))
+                                .cornerRadius(8)
+                        }
+                        
+                        // Messages d'erreur ou de succès
+                        if let error = viewModel.createError {
+                            Text(error)
+                                .font(.caption)
+                                .foregroundColor(.red)
+                                .padding()
+                        }
+                        
+                        if viewModel.createSuccess {
+                            Text("Session créée avec succès !")
+                                .font(.caption)
+                                .foregroundColor(.green)
+                                .padding()
+                        }
+                        
+                        // Bouton Créer
+                        Button(action: {
+                            Task {
+                                await viewModel.createSession()
+                            }
+                        }) {
+                            if viewModel.isCreating {
+                                ProgressView()
+                                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                            } else {
+                                Text("Créer la session")
+                                    .fontWeight(.medium)
+                            }
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                        .disabled(viewModel.isCreating)
+                    }
+                    .padding()
+                }
             }
-            .padding(.vertical)
-        }
-        .navigationTitle("Sessions")
-        .onAppear {
-            viewModel.loadData()
-        }
-        .refreshable {
-            viewModel.loadData()
+            .background(Color(.systemBackground))
+            .cornerRadius(12)
+            .shadow(radius: 20)
+            .padding(20)
+            .frame(maxWidth: 500)
         }
     }
     
@@ -182,5 +382,6 @@ struct SessionView_Previews: PreviewProvider {
     static var previews: some View {
         SessionView()
             .environmentObject(Routeur())
+            .environmentObject(UserViewModel(routeur: Routeur()))
     }
 }
