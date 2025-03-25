@@ -73,11 +73,11 @@ struct CatalogueView: View {
                 }
                 Spacer()
             } else {
-                // Liste de jeux
+                // Liste de jeux - CORRIGÉ: Utiliser CatalogueItemView au lieu de CatalogueDetailView
                 ScrollView {
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 160))], spacing: 16) {
                         ForEach(viewModel.items) { item in
-                            CatalogueDetailView(item: item)
+                            CatalogueItemView(item: item) // <-- CHANGEMENT ICI
                                 .onTapGesture {
                                     viewModel.selectItem(item)
                                 }

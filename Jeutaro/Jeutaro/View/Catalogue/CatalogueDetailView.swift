@@ -28,25 +28,11 @@ struct CatalogueDetailView: View {
             
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
-                    // Image
-                    ZStack {
-                        if let imageData = item.image, let uiImage = UIImage(data: imageData) {
-                            Image(uiImage: uiImage)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 300)
-                        } else {
-                            Rectangle()
-                                .fill(Color.gray.opacity(0.3))
-                                .frame(height: 300)
-                            
-                            Image(systemName: "gamecontroller")
-                                .font(.system(size: 60))
-                                .foregroundColor(.gray)
-                        }
-                    }
-                    .cornerRadius(12)
+                    // Image avec cache
+                    CachedImage(id: item.id, imageData: item.image)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 300)
+                        .cornerRadius(12)
                     
                     // Informations principales
                     VStack(alignment: .leading, spacing: 12) {

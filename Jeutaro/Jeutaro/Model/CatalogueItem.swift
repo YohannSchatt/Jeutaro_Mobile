@@ -15,7 +15,7 @@ struct CatalogueItem: Identifiable {
     let prix: Float
     let prenomVendeur: String
     let nomVendeur: String
-    let image: Data?
+    let image: Data? // Remettre le traitement d'image
     let etat: String
     
     init(from dto: CatalogueItemDto) {
@@ -28,7 +28,7 @@ struct CatalogueItem: Identifiable {
         self.nomVendeur = dto.nomVendeur
         self.etat = dto.etat
         
-        // Convertir l'image base64 en Data
+        // Remettre le traitement d'image
         if dto.image != "notfound" {
             self.image = Data(base64Encoded: dto.image)
         } else {

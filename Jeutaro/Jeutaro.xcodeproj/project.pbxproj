@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		340DE6932D92289600DF7BA2 /* CatalogueItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340DE6922D92289600DF7BA2 /* CatalogueItemView.swift */; };
+		340DE6952D922C3300DF7BA2 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340DE6942D922C3300DF7BA2 /* ImageCache.swift */; };
 		34977BB02D92208D004CFDBF /* CatalogueRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34977BAF2D92208D004CFDBF /* CatalogueRequestDto.swift */; };
 		34977BB22D9220CB004CFDBF /* CatalogueResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34977BB12D9220CB004CFDBF /* CatalogueResponseDto.swift */; };
 		34977BB42D9220FB004CFDBF /* CatalogueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34977BB32D9220FB004CFDBF /* CatalogueItem.swift */; };
@@ -125,6 +127,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		340DE6922D92289600DF7BA2 /* CatalogueItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueItemView.swift; sourceTree = "<group>"; };
+		340DE6942D922C3300DF7BA2 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		34977BAF2D92208D004CFDBF /* CatalogueRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueRequestDto.swift; sourceTree = "<group>"; };
 		34977BB12D9220CB004CFDBF /* CatalogueResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueResponseDto.swift; sourceTree = "<group>"; };
 		34977BB32D9220FB004CFDBF /* CatalogueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueItem.swift; sourceTree = "<group>"; };
@@ -260,6 +264,7 @@
 			children = (
 				B71FF1582D81A5A7000425C3 /* CatalogueView.swift */,
 				34977BBC2D922268004CFDBF /* CatalogueDetailView.swift */,
+				340DE6922D92289600DF7BA2 /* CatalogueItemView.swift */,
 			);
 			path = Catalogue;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 				B71FF1562D81A57F000425C3 /* ConnexionView.swift */,
 				B71FF15C2D81A5BC000425C3 /* SessionView.swift */,
 				B71FF1822D8AC2A8000425C3 /* ConnexionSucessView.swift */,
+				340DE6942D922C3300DF7BA2 /* ImageCache.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -737,6 +743,7 @@
 				B76D96362D91461F0092CAE7 /* AdminService.swift in Sources */,
 				B71FF19A2D8C6696000425C3 /* Vendeur.swift in Sources */,
 				B76D964C2D91AA360092CAE7 /* PageMonCompteView.swift in Sources */,
+				340DE6952D922C3300DF7BA2 /* ImageCache.swift in Sources */,
 				B71FF1902D8C337B000425C3 /* ModificationVendeurView.swift in Sources */,
 				B71FF17C2D8875E7000425C3 /* AuthError.swift in Sources */,
 				B71FF1722D882D85000425C3 /* AuthService.swift in Sources */,
@@ -765,6 +772,7 @@
 				B76D96412D9149C70092CAE7 /* GetGestionnaireDto.swift in Sources */,
 				34977BB02D92208D004CFDBF /* CatalogueRequestDto.swift in Sources */,
 				B71FF1752D8839CE000425C3 /* User.swift in Sources */,
+				340DE6932D92289600DF7BA2 /* CatalogueItemView.swift in Sources */,
 				B71FF1932D8C3505000425C3 /* VendeurViewModel.swift in Sources */,
 				34977BB22D9220CB004CFDBF /* CatalogueResponseDto.swift in Sources */,
 				B71FF1972D8C6667000425C3 /* VendeurService.swift in Sources */,

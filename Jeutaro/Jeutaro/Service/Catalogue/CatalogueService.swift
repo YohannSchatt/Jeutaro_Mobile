@@ -25,13 +25,7 @@ struct CatalogueService {
         request.httpMethod = "POST"
         
         // Créer le DTO de requête exactement comme le backend l'attend
-        let catalogueRequest: [String: Any] = [
-            "page": page,
-            "nom": nil as String?,
-            "editeur": nil as String?,
-            "prixMin": nil as Double?,
-            "prixMax": nil as Double?
-        ]
+        var catalogueRequest: [String: Any] = ["page": page]
         
         // Convertir en JSON en filtrant les valeurs nil
         let jsonData = try JSONSerialization.data(
@@ -50,11 +44,15 @@ struct CatalogueService {
         }
         
         do {
-            // Utiliser URLSession directement pour plus de contrôle
+            
             let (data, response) = try await URLSession.shared.data(for: request)
             
-            // Log de la réponse brute
-            print("Response data: \(String(data: data, encoding: .utf8) ?? "no data")")
+            print("✅ Réponse reçue: \(data.count) bytes")
+            
+            // Afficher uniquement le début de la réponse pour éviter de surcharger la console
+            if let responseStr = String(data: data, encoding: .utf8)?.prefix(200) {
+                print("📝 Début de la réponse: \(responseStr)...")
+            }
             
             guard let httpResponse = response as? HTTPURLResponse else {
                 throw CatalogueError.NetworkError(NSError(domain: "HTTP", code: 0))
@@ -62,7 +60,8 @@ struct CatalogueService {
             
             print("HTTP Status: \(httpResponse.statusCode)")
             
-            if httpResponse.statusCode == 200 {
+            // Dans CatalogueService.swift
+            if httpResponse.statusCode == 200 || httpResponse.statusCode == 201 {  // Ajouter 201 ici
                 let decoder = JSONDecoder()
                 do {
                     let result = try decoder.decode(CatalogueResponseDto.self, from: data)
