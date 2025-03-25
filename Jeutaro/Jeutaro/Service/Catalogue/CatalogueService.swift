@@ -18,18 +18,41 @@ struct CatalogueService {
         self.apiUrl = apiUrl + "/jeu"
     }
     
-    func getCatalogue(page: Int) async throws -> CatalogueResponseDto {
+    func getCatalogue(
+        page: Int, 
+        nom: String? = nil, 
+        editeur: String? = nil, 
+        prixMin: Double? = nil, 
+        prixMax: Double? = nil
+    ) async throws -> CatalogueResponseDto {
         let url = URL(string: "\(apiUrl)/catalogue")!
         var request = URLRequest(url: url)
         
         request.httpMethod = "POST"
         
-        // Créer le DTO de requête exactement comme le backend l'attend
+        // Créer le DTO de requête avec tous les filtres
         var catalogueRequest: [String: Any] = ["page": page]
         
-        // Convertir en JSON en filtrant les valeurs nil
+        // Ajouter filtres seulement s'ils ne sont pas nil
+        if let nom = nom, !nom.isEmpty {
+            catalogueRequest["nom"] = nom
+        }
+        
+        if let editeur = editeur, !editeur.isEmpty {
+            catalogueRequest["editeur"] = editeur
+        }
+        
+        if let prixMin = prixMin {
+            catalogueRequest["prixMin"] = prixMin
+        }
+        
+        if let prixMax = prixMax {
+            catalogueRequest["prixMax"] = prixMax
+        }
+        
+        // Convertir en JSON
         let jsonData = try JSONSerialization.data(
-            withJSONObject: catalogueRequest.compactMapValues { $0 },
+            withJSONObject: catalogueRequest,
             options: []
         )
         
@@ -44,7 +67,6 @@ struct CatalogueService {
         }
         
         do {
-            
             let (data, response) = try await URLSession.shared.data(for: request)
             
             print("✅ Réponse reçue: \(data.count) bytes")
@@ -60,8 +82,7 @@ struct CatalogueService {
             
             print("HTTP Status: \(httpResponse.statusCode)")
             
-            // Dans CatalogueService.swift
-            if httpResponse.statusCode == 200 || httpResponse.statusCode == 201 {  // Ajouter 201 ici
+            if httpResponse.statusCode == 200 || httpResponse.statusCode == 201 {
                 let decoder = JSONDecoder()
                 do {
                     let result = try decoder.decode(CatalogueResponseDto.self, from: data)
